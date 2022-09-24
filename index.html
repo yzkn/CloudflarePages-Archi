@@ -103,10 +103,6 @@
                     });
 
                     filtered.forEach(element => {
-                        let elem = document.createElement('div');
-                        elem.className = 'card';
-                        elem.width = '64px';
-
                         let link = document.createElement('a');
                         link.href = baseUri + element.path;
                         link.style.textDecoration = 'none';
@@ -120,16 +116,8 @@
                         img.title = element.path;
                         img.width = 64;
 
-                        let body = document.createElement('div');
-                        body.className = 'card-body';
-                        body.innerHTML = '<p class="card-text">' + element.path + '</p>';
-                        body.style.color = 'darkgray';
-                        body.style.fontSize = '4px';
-
                         link.appendChild(img);
-                        elem.appendChild(link);
-                        elem.appendChild(body);
-                        imageList.appendChild(elem);
+                        imageList.appendChild(link);
                     });
                 });
         });
