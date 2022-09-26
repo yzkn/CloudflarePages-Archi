@@ -1,0 +1,10 @@
+/* Copyright (c) 2022 YA All rights reserved. */
+
+
+.alert {
+    display: none;
+}
+
+.alert.show {
+    display: block;
+}
