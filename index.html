@@ -22,8 +22,22 @@
                 <i class="bi bi-app-indicator"></i>
                 Archit
             </a>
+            <div class="d-flex align-items-center">
+                <input class="form-control me-2" type="search" placeholder="検索キーワード" aria-label="Search"
+                    id="icon-search-term">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="icon-search-ignorecase" title="Ignore case">
+                </div>
+                <button class="btn btn-outline-success" type="button" id="icon-search">Search</button>
+            </div>
         </div>
     </nav>
+
+    <!-- Alert -->
+    <div class="alert alert-warning alert-dismissible fade" role="alert" id="alert-input-keyword">
+        検索キーワードを入力してください。
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
 
     <div id="image-list" class="card-group"></div>
 
@@ -44,14 +58,27 @@
         const apiUri = 'list.json';
         const baseUri = 'https://archit.pages.dev/';
 
-        window.addEventListener('DOMContentLoaded', (event) => {
-            let imageList = document.getElementById('image-list');
+        let queries;
 
+        const retrieveQueryDict = () => {
+            const urlSearchParams = new URLSearchParams(window.location.search);
+            return Object.fromEntries(urlSearchParams.entries());
+        }
+
+        const loadJson = (term = '', ignore_case = 'false') => {
             fetch(apiUri)
                 .then(response => response.json())
                 .then(json => {
                     const filtered = json.tree.filter(function (element, index, array) {
-                        return (element.type == 'blob' && element.path.startsWith('asset/') && element.path.includes('.png'));
+                        if (term != '') {
+                            if (ignore_case) {
+                                return (element.type == 'blob' && element.path.startsWith('asset/') && element.path.includes('.png') && element.path.toLowerCase().includes(term.toLowerCase()));
+                            } else {
+                                return (element.type == 'blob' && element.path.startsWith('asset/') && element.path.includes('.png') && element.path.includes(term));
+                            }
+                        } else {
+                            return (element.type == 'blob' && element.path.startsWith('asset/') && element.path.includes('.png'));
+                        }
                     });
 
                     const sorted = filtered.sort(function (a, b) {
@@ -66,24 +93,79 @@
                         }
                     });
 
+                    let imageList = document.getElementById('image-list');
+                    imageList.innerHTML = '';
+
                     filtered.forEach(element => {
-                        let link = document.createElement('a');
-                        link.href = baseUri + element.path;
-                        link.style.textDecoration = 'none';
-                        link.target = '_blank';
+                        // let link = document.createElement('a');
+                        // link.href = baseUri + element.path;
+                        // link.style.textDecoration = 'none';
+                        // link.target = '_blank';
 
                         let img = document.createElement('img');
                         img.alt = element.path;
                         img.className = 'img-thumbnail';
+                        img.crossOrigin = "anonymous";
                         img.height = 64;
                         img.src = baseUri + element.path;
                         img.title = element.path;
                         img.width = 64;
+                        img.onclick = (event) => {
+                            const img = event.target;
+                            const canvas = document.createElement('canvas');
+                            canvas.width = img.naturalWidth;
+                            canvas.height = img.naturalHeight;
+                            const ctx = canvas.getContext('2d');
 
-                        link.appendChild(img);
-                        imageList.appendChild(link);
+                            ctx.beginPath();
+                            ctx.fillStyle = 'white';
+                            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                            ctx.drawImage(img, 0, 0);
+                            canvas.toBlob(async (blob) => {
+                                const item = new ClipboardItem({
+                                    'image/png': blob
+                                });
+                                await navigator.clipboard.write([item]);
+                                window.alert('クリップボードにコピーしました。');
+                            });
+                        };
+
+                        // link.appendChild(img);
+                        // imageList.appendChild(link);
+                        imageList.appendChild(img);
                     });
                 });
+        };
+
+        window.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('.alert').forEach((alert) => new bootstrap.Alert(alert));
+
+            let term = retrieveQueryDict()['term'];
+            if (term) {
+                loadJson(
+                    term,
+                    document.getElementById('icon-search-ignorecase').value
+                );
+            } else {
+                document.getElementById('alert-input-keyword').classList.add('show');
+                setTimeout(() => {
+                    bootstrap.Alert.getInstance(document.getElementById('alert-input-keyword')).close()
+                }, 3000);
+            }
+
+            document.getElementById('icon-search').addEventListener('click', (event) => {
+                loadJson(
+                    document.getElementById('icon-search-term').value,
+                    document.getElementById('icon-search-ignorecase').value
+                );
+            });
+
+            document.getElementById('icon-search-term').addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    document.getElementById('icon-search').dispatchEvent(new Event('click'));
+                }
+            });
         });
     </script>
 </body>
