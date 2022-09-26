@@ -91,7 +91,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     let term = retrieveQueryDict()['term'];
     if (term) {
-        bootstrap.Alert.getInstance(document.getElementById('alert-input-keyword')).close()
+        bootstrap.Alert.getInstance(document.getElementById('alert-input-keyword')).close();
+
+        document.getElementById('icon-search-term').value = term;
 
         loadJson(
             term,
