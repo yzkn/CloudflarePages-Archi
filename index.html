@@ -71,16 +71,6 @@
                 .then(response => response.json())
                 .then(json => {
                     const filtered = json.tree.filter(function (element, index, array) {
-                        // if (term != '') {
-                        //     if (ignore_case) {
-                        //         return (element.type == 'blob' && element.path.startsWith('asset/') && element.path.includes('.png') && element.path.toLowerCase().includes(term.toLowerCase()));
-                        //     } else {
-                        //         return (element.type == 'blob' && element.path.startsWith('asset/') && element.path.includes('.png') && element.path.includes(term));
-                        //     }
-                        // } else {
-                        //     return (element.type == 'blob' && element.path.startsWith('asset/') && element.path.includes('.png'));
-                        // }
-
                         return (
                             element.type == 'blob' && element.path.startsWith('asset/') && element.path.includes('.png')
                             &&
@@ -107,11 +97,6 @@
                     imageList.innerHTML = '';
 
                     filtered.forEach(element => {
-                        // let link = document.createElement('a');
-                        // link.href = baseUri + element.path;
-                        // link.style.textDecoration = 'none';
-                        // link.target = '_blank';
-
                         let img = document.createElement('img');
                         img.alt = element.path;
                         img.className = 'img-thumbnail';
@@ -141,8 +126,6 @@
                             });
                         };
 
-                        // link.appendChild(img);
-                        // imageList.appendChild(link);
                         imageList.appendChild(img);
                     });
                 });
