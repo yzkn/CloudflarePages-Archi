@@ -11,6 +11,16 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        .alert {
+            display: none;
+        }
+
+        .alert.show {
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
@@ -36,6 +46,10 @@
     <!-- Alert -->
     <div class="alert alert-warning alert-dismissible fade" role="alert" id="alert-input-keyword">
         検索キーワードを入力してください。
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <div class="alert alert-success alert-dismissible fade" role="alert" id="alert-copied">
+        クリップボードにコピーしました。
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 
@@ -66,22 +80,27 @@
         }
 
         const loadJson = (term = '', ignore_case = false) => {
-            console.log('loadJson', term, ignore_case, document.getElementById('icon-search-ignorecase').checked);
             fetch(apiUri)
                 .then(response => response.json())
                 .then(json => {
                     const filtered = json.tree.filter(function (element, index, array) {
-                        return (
-                            element.type == 'blob' && element.path.startsWith('asset/') && element.path.includes('.png')
-                            &&
-                            (
-                                term == '' ||
-                                (ignore_case ? element.path.toLowerCase().includes(term.toLowerCase()) : element.path.includes(term))
-                            )
-                        );
+                        return (element.type == 'blob' && element.path.startsWith('asset/') && element.path.includes('.png'));
                     });
 
-                    const sorted = filtered.sort(function (a, b) {
+                    const filtered2 = filtered.filter(function (element, index, array) {
+                        return ignore_case
+                            ?
+                            term.toLowerCase()
+                                .split(/\s+/)
+                                .map(t => element.path.toLowerCase().includes(t))
+                                .every(t => t === true)
+                            :
+                            term.split(/\s+/)
+                                .map(t => element.path.includes(t))
+                                .every(t => t === true)
+                    });
+
+                    const sorted = filtered2.sort(function (a, b) {
                         const na = a.path.toUpperCase();
                         const nb = b.path.toUpperCase();
                         if (na < nb) {
@@ -96,7 +115,7 @@
                     let imageList = document.getElementById('image-list');
                     imageList.innerHTML = '';
 
-                    filtered.forEach(element => {
+                    sorted.forEach(element => {
                         let img = document.createElement('img');
                         img.alt = element.path;
                         img.className = 'img-thumbnail';
@@ -122,7 +141,11 @@
                                     'image/png': blob
                                 });
                                 await navigator.clipboard.write([item]);
-                                window.alert('クリップボードにコピーしました。');
+
+                                document.getElementById('alert-copied').classList.add('show');
+                                setTimeout(() => {
+                                    document.getElementById('alert-copied').classList.remove('show');
+                                }, 1000);
                             });
                         };
 
@@ -136,6 +159,8 @@
 
             let term = retrieveQueryDict()['term'];
             if (term) {
+                bootstrap.Alert.getInstance(document.getElementById('alert-input-keyword')).close()
+
                 loadJson(
                     term,
                     document.getElementById('icon-search-ignorecase').checked
