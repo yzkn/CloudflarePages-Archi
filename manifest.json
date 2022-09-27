@@ -1,0 +1,34 @@
+{
+  "background_color": "#ffffff",
+  "description": "Archit",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "Archit",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "Archit",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "image/archit.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "image/archit_64x64.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "image/archit_128x128.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "image/archit_256x256.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
