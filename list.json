@@ -58704,6 +58704,510 @@
       "path": "asset/OpenSecurityArchitecture/osa_wireless_network.svg",
       "type": "blob",
       "size": 9132
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable",
+      "type": "tree"
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/CELA_Licenses_Public_Use_Icons.pdf",
+      "type": "blob",
+      "size": 68663
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons",
+      "type": "tree"
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/BusinessCentral_scalable.png",
+      "type": "blob",
+      "size": 88111
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/BusinessCentral_scalable.svg",
+      "type": "blob",
+      "size": 5017
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/Commerce_scalable.png",
+      "type": "blob",
+      "size": 30634
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/Commerce_scalable.svg",
+      "type": "blob",
+      "size": 3552
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/ConnectedStore_scalable.png",
+      "type": "blob",
+      "size": 68087
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/ConnectedStore_scalable.svg",
+      "type": "blob",
+      "size": 5984
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/CoreHR_scalable.png",
+      "type": "blob",
+      "size": 31233
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/CoreHR_scalable.svg",
+      "type": "blob",
+      "size": 3719
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/CustomerInsights_scalable.png",
+      "type": "blob",
+      "size": 62374
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/CustomerInsights_scalable.svg",
+      "type": "blob",
+      "size": 6922
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/CustomerServiceInsights_scalable.png",
+      "type": "blob",
+      "size": 35480
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/CustomerServiceInsights_scalable.svg",
+      "type": "blob",
+      "size": 4371
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/CustomerService_scalable.png",
+      "type": "blob",
+      "size": 47215
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/CustomerService_scalable.svg",
+      "type": "blob",
+      "size": 3638
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/CustomerVoice_scalable.png",
+      "type": "blob",
+      "size": 62913
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/CustomerVoice_scalable.svg",
+      "type": "blob",
+      "size": 6765
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/FieldService_scalable.png",
+      "type": "blob",
+      "size": 53131
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/FieldService_scalable.svg",
+      "type": "blob",
+      "size": 3932
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/Finance+Operations_scalable.png",
+      "type": "blob",
+      "size": 42163
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/Finance+Operations_scalable.svg",
+      "type": "blob",
+      "size": 4811
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/Finance_scalable.png",
+      "type": "blob",
+      "size": 24889
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/Finance_scalable.svg",
+      "type": "blob",
+      "size": 5034
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/FraudProtection_scalable.png",
+      "type": "blob",
+      "size": 52104
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/FraudProtection_scalable.svg",
+      "type": "blob",
+      "size": 4993
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/IntelligentOrderManagement_scalable (1).png",
+      "type": "blob",
+      "size": 53241
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/IntelligentOrderManagement_scalable (1).svg",
+      "type": "blob",
+      "size": 3651
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/MarketInsights_scalable.png",
+      "type": "blob",
+      "size": 64581
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/MarketInsights_scalable.svg",
+      "type": "blob",
+      "size": 4292
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/Marketing_scalable.png",
+      "type": "blob",
+      "size": 47338
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/Marketing_scalable.svg",
+      "type": "blob",
+      "size": 4770
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/Product_Insights__scalable.png",
+      "type": "blob",
+      "size": 52397
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/Product_Insights__scalable.svg",
+      "type": "blob",
+      "size": 7825
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/ProjectOperations_scalable.png",
+      "type": "blob",
+      "size": 47880
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/ProjectOperations_scalable.svg",
+      "type": "blob",
+      "size": 5103
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/ProjectServiceAutomation_scalable.png",
+      "type": "blob",
+      "size": 28274
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/ProjectServiceAutomation_scalable.svg",
+      "type": "blob",
+      "size": 2825
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/SalesInsights_scalable.png",
+      "type": "blob",
+      "size": 53707
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/SalesInsights_scalable.svg",
+      "type": "blob",
+      "size": 2857
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/Sales_scalable.png",
+      "type": "blob",
+      "size": 50842
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/Sales_scalable.svg",
+      "type": "blob",
+      "size": 4824
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/SupplyChainManagement_scalable.png",
+      "type": "blob",
+      "size": 40509
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/SupplyChainManagement_scalable.svg",
+      "type": "blob",
+      "size": 4473
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/SustainabilityCalculator_scalable.png",
+      "type": "blob",
+      "size": 52865
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/SustainabilityCalculator_scalable.svg",
+      "type": "blob",
+      "size": 3926
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/TalentAttract_scalable.png",
+      "type": "blob",
+      "size": 55854
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/TalentAttract_scalable.svg",
+      "type": "blob",
+      "size": 3346
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/TalentOnboard_scalable.png",
+      "type": "blob",
+      "size": 36687
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/TalentOnboard_scalable.svg",
+      "type": "blob",
+      "size": 2664
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/Talent_scalable.png",
+      "type": "blob",
+      "size": 49585
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 App Icons/Talent_scalable.svg",
+      "type": "blob",
+      "size": 2551
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 Mixed Reality Icons",
+      "type": "tree"
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 Mixed Reality Icons/Guides_scalable.png",
+      "type": "blob",
+      "size": 61182
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 Mixed Reality Icons/Guides_scalable.svg",
+      "type": "blob",
+      "size": 3511
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 Mixed Reality Icons/ImportTool_scalable.png",
+      "type": "blob",
+      "size": 51793
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 Mixed Reality Icons/ImportTool_scalable.svg",
+      "type": "blob",
+      "size": 3065
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 Mixed Reality Icons/Layout_scalable.png",
+      "type": "blob",
+      "size": 56283
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 Mixed Reality Icons/Layout_scalable.svg",
+      "type": "blob",
+      "size": 2478
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 Mixed Reality Icons/MRPortal_scalable.png",
+      "type": "blob",
+      "size": 44017
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 Mixed Reality Icons/MRPortal_scalable.svg",
+      "type": "blob",
+      "size": 1961
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 Mixed Reality Icons/ProductVisualize_scalable.png",
+      "type": "blob",
+      "size": 50344
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 Mixed Reality Icons/ProductVisualize_scalable.svg",
+      "type": "blob",
+      "size": 5026
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 Mixed Reality Icons/RemoteAssist_scalable.png",
+      "type": "blob",
+      "size": 40234
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 Mixed Reality Icons/RemoteAssist_scalable.svg",
+      "type": "blob",
+      "size": 5057
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 Mixed Reality Icons/VoiceAssistant_scalable.png",
+      "type": "blob",
+      "size": 47240
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 Mixed Reality Icons/VoiceAssistant_scalable.svg",
+      "type": "blob",
+      "size": 3444
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 Product Family Icon",
+      "type": "tree"
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 Product Family Icon/Dynamics365_scalable.png",
+      "type": "blob",
+      "size": 44878
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 Product Family Icon/Dynamics365_scalable.svg",
+      "type": "blob",
+      "size": 3197
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 Sub App Icons",
+      "type": "tree"
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 Sub App Icons/ProjectTimesheet_scalable.png",
+      "type": "blob",
+      "size": 32206
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 Sub App Icons/ProjectTimesheet_scalable.svg",
+      "type": "blob",
+      "size": 1930
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 Sub App Icons/ReturnToSchool_scalable.png",
+      "type": "blob",
+      "size": 43169
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 Sub App Icons/ReturnToSchool_scalable.svg",
+      "type": "blob",
+      "size": 5218
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 Sub App Icons/ReturnToWork_scalable.png",
+      "type": "blob",
+      "size": 33951
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 Sub App Icons/ReturnToWork_scalable.svg",
+      "type": "blob",
+      "size": 5351
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 Sub App Icons/SCMWarehousing_scalable.png",
+      "type": "blob",
+      "size": 50637
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365 Sub App Icons/SCMWarehousing_scalable.svg",
+      "type": "blob",
+      "size": 4795
+    },
+    {
+      "path": "asset/Dynamics_365_Icons_scalable/Dynamics 365_Icons_FAQ.pdf",
+      "type": "blob",
+      "size": 104831
+    },
+    {
+      "path": "asset/Power_Platform_scalable",
+      "type": "tree"
+    },
+    {
+      "path": "asset/Power_Platform_scalable/AIBuilder_scalable.png",
+      "type": "blob",
+      "size": 47851
+    },
+    {
+      "path": "asset/Power_Platform_scalable/AIBuilder_scalable.svg",
+      "type": "blob",
+      "size": 5225
+    },
+    {
+      "path": "asset/Power_Platform_scalable/CELA_Licenses_Public_Use_Icons.pdf",
+      "type": "blob",
+      "size": 65043
+    },
+    {
+      "path": "asset/Power_Platform_scalable/Dataverse_scalable.png",
+      "type": "blob",
+      "size": 56148
+    },
+    {
+      "path": "asset/Power_Platform_scalable/Dataverse_scalable.svg",
+      "type": "blob",
+      "size": 4605
+    },
+    {
+      "path": "asset/Power_Platform_scalable/PowerApps_scalable.png",
+      "type": "blob",
+      "size": 60970
+    },
+    {
+      "path": "asset/Power_Platform_scalable/PowerApps_scalable.svg",
+      "type": "blob",
+      "size": 3390
+    },
+    {
+      "path": "asset/Power_Platform_scalable/PowerAutomate_scalable.png",
+      "type": "blob",
+      "size": 38798
+    },
+    {
+      "path": "asset/Power_Platform_scalable/PowerAutomate_scalable.svg",
+      "type": "blob",
+      "size": 2270
+    },
+    {
+      "path": "asset/Power_Platform_scalable/PowerBI_scalable.png",
+      "type": "blob",
+      "size": 21516
+    },
+    {
+      "path": "asset/Power_Platform_scalable/PowerBI_scalable.svg",
+      "type": "blob",
+      "size": 2196
+    },
+    {
+      "path": "asset/Power_Platform_scalable/PowerFx_scalable.png",
+      "type": "blob",
+      "size": 40636
+    },
+    {
+      "path": "asset/Power_Platform_scalable/PowerFx_scalable.svg",
+      "type": "blob",
+      "size": 4801
+    },
+    {
+      "path": "asset/Power_Platform_scalable/PowerPages_scalable.png",
+      "type": "blob",
+      "size": 54660
+    },
+    {
+      "path": "asset/Power_Platform_scalable/PowerPages_scalable.svg",
+      "type": "blob",
+      "size": 3344
+    },
+    {
+      "path": "asset/Power_Platform_scalable/PowerPlatform_scalable.png",
+      "type": "blob",
+      "size": 64268
+    },
+    {
+      "path": "asset/Power_Platform_scalable/PowerPlatform_scalable.svg",
+      "type": "blob",
+      "size": 4700
+    },
+    {
+      "path": "asset/Power_Platform_scalable/PowerVirtualAgents_scalable.png",
+      "type": "blob",
+      "size": 25227
+    },
+    {
+      "path": "asset/Power_Platform_scalable/PowerVirtualAgents_scalable.svg",
+      "type": "blob",
+      "size": 3259
+    },
+    {
+      "path": "asset/Power_Platform_scalable/Power_Platform_Icons_FAQ.pdf",
+      "type": "blob",
+      "size": 104580
     }
   ]
 }
