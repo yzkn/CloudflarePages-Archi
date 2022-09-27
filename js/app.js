@@ -11,7 +11,20 @@ const retrieveQueryDict = () => {
     return Object.fromEntries(urlSearchParams.entries());
 }
 
+const showSpinner = () => {
+    document.getElementById('icon-search-spinner').classList.remove('spinner-hidden');
+    document.getElementById('icon-search').disabled = true;
+}
+
+const hideSpinner = () => {
+    document.getElementById('icon-search-spinner').classList.add('spinner-hidden');
+    document.getElementById('icon-search').disabled = false;
+}
+
 const loadJson = (term = '', ignore_case = false) => {
+    showSpinner();
+
+    let elementsProcessed = 0;
     fetch(apiUri)
         .then(response => response.json())
         .then(json => {
@@ -48,14 +61,12 @@ const loadJson = (term = '', ignore_case = false) => {
             imageList.innerHTML = '';
 
             sorted.forEach(element => {
+                let box = document.createElement('div');
+                box.classList.add('position-relative');
+                box.height = 64;
+                box.width = 64;
+
                 let img = document.createElement('img');
-                img.alt = element.path;
-                img.className = 'img-thumbnail';
-                img.crossOrigin = "anonymous";
-                img.height = 64;
-                img.src = baseUri + element.path;
-                img.title = element.path;
-                img.width = 64;
                 img.onclick = (event) => {
                     const img = event.target;
                     const canvas = document.createElement('canvas');
@@ -69,21 +80,64 @@ const loadJson = (term = '', ignore_case = false) => {
 
                     ctx.drawImage(img, 0, 0);
                     canvas.toBlob(async (blob) => {
-                        const item = new ClipboardItem({
-                            'image/png': blob
-                        });
-                        await navigator.clipboard.write([item]);
+                        try {
+                            const item = new ClipboardItem({
+                                'image/png': blob
+                            });
+                            await navigator.clipboard.write([item]);
 
-                        document.getElementById('alert-copied').classList.add('show');
-                        setTimeout(() => {
-                            document.getElementById('alert-copied').classList.remove('show');
-                        }, 1000);
+                            document.getElementById('alert-copied').classList.add('show');
+                            setTimeout(() => {
+                                document.getElementById('alert-copied').classList.remove('show');
+                            }, 1000);
+
+                        } catch (error) {
+                            if (error.message == 'ClipboardItem is not defined') {
+                                document.getElementById('alert-clipboard-item').classList.add('show');
+                            }
+                        }
                     });
                 };
 
-                imageList.appendChild(img);
+                img.onload = () => {
+                    const width = img.naturalWidth;
+                    const height = img.naturalHeight;
+                    const imgSize = String(width) + 'x' + String(height);
+
+                    let captionBox = document.createElement('div');
+                    captionBox.classList.add('position-absolute');
+                    captionBox.classList.add('bottom-0');
+                    captionBox.classList.add('w-100');
+
+                    let captionLabel = document.createElement('p');
+                    captionLabel.classList.add('m-0');
+                    captionLabel.classList.add('px-1');
+                    captionLabel.classList.add('text-end');
+                    captionLabel.classList.add('text-light');
+                    captionLabel.innerText = imgSize;
+                    captionLabel.style.fontSize = '10px';
+                    captionLabel.style.backgroundColor = 'rgba(0, 0, 0, 0.3)';
+
+                    box.appendChild(img);
+                    captionBox.appendChild(captionLabel);
+                    box.appendChild(captionBox);
+                    imageList.appendChild(box);
+
+
+                    elementsProcessed++;
+                    if (elementsProcessed === sorted.length) {
+                        hideSpinner();
+                    }
+                }
+
+                img.alt = element.path;
+                img.className = 'img-thumbnail';
+                img.crossOrigin = "anonymous";
+                img.title = element.path;
+
+                img.src = baseUri + element.path;
             });
-        });
+        })
 };
 
 window.addEventListener('DOMContentLoaded', (event) => {
