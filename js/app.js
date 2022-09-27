@@ -89,6 +89,13 @@ const loadJson = (term = '', ignore_case = false) => {
 window.addEventListener('DOMContentLoaded', (event) => {
     document.querySelectorAll('.alert').forEach((alert) => new bootstrap.Alert(alert));
 
+    let ic = retrieveQueryDict()['ic'];
+    if (ic) {
+        if (ic == 't') {
+            document.getElementById('icon-search-ignorecase').checked = true;
+        }
+    }
+
     let term = retrieveQueryDict()['term'];
     if (term) {
         bootstrap.Alert.getInstance(document.getElementById('alert-input-keyword')).close();
