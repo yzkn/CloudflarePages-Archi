@@ -5,21 +5,22 @@ const apiUri = 'list.json';
 const baseUri = 'https://archit.pages.dev/';
 
 let queries;
+let toastDict;
 
 const retrieveQueryDict = () => {
     const urlSearchParams = new URLSearchParams(window.location.search);
     return Object.fromEntries(urlSearchParams.entries());
-}
+};
 
 const showSpinner = () => {
     document.getElementById('icon-search-spinner').classList.remove('spinner-hidden');
     document.getElementById('icon-search').disabled = true;
-}
+};
 
 const hideSpinner = () => {
     document.getElementById('icon-search-spinner').classList.add('spinner-hidden');
     document.getElementById('icon-search').disabled = false;
-}
+};
 
 const loadJson = (term = '', ignore_case = false) => {
     showSpinner();
@@ -31,14 +32,11 @@ const loadJson = (term = '', ignore_case = false) => {
     fetch(apiUri)
         .then(response => response.json())
         .then(json => {
-            // console.log('json', json);
-
-            const filtered = json.tree.filter(function (element, index, array) {
+            const filtered = json.tree.filter((element) => {
                 return (element.type == 'blob' && element.path.startsWith('asset/') && element.path.includes('.png'));
             });
-            // console.log('filtered', filtered);
 
-            const filtered2 = filtered.filter(function (element, index, array) {
+            const filtered2 = filtered.filter((element) => {
                 return ignore_case
                     ?
                     term.toLowerCase()
@@ -50,13 +48,11 @@ const loadJson = (term = '', ignore_case = false) => {
                         .map(t => element.path.includes(t))
                         .every(t => t === true)
             });
-            // console.log('filtered2', filtered2);
 
             if (filtered2.length == 0) {
                 hideSpinner();
             } else {
-
-                const sorted = filtered2.sort(function (a, b) {
+                const sorted = filtered2.sort((a, b) => {
                     const na = a.path.toUpperCase();
                     const nb = b.path.toUpperCase();
                     if (na < nb) {
@@ -93,15 +89,10 @@ const loadJson = (term = '', ignore_case = false) => {
                                     'image/png': blob
                                 });
                                 await navigator.clipboard.write([item]);
-
-                                document.getElementById('alert-copied').classList.add('show');
-                                setTimeout(() => {
-                                    document.getElementById('alert-copied').classList.remove('show');
-                                }, 1000);
-
+                                toastDict['toast-copied'].show();
                             } catch (error) {
                                 if (error.message == 'ClipboardItem is not defined') {
-                                    document.getElementById('alert-clipboard-item').classList.add('show');
+                                    toastDict['toast-clipboard-item'].show();
                                 }
                             }
                         });
@@ -123,14 +114,13 @@ const loadJson = (term = '', ignore_case = false) => {
                         captionLabel.classList.add('text-end');
                         captionLabel.classList.add('text-light');
                         captionLabel.innerText = imgSize;
-                        captionLabel.style.fontSize = '10px';
                         captionLabel.style.backgroundColor = 'rgba(0, 0, 0, 0.3)';
+                        captionLabel.style.fontSize = '10px';
 
                         box.appendChild(img);
                         captionBox.appendChild(captionLabel);
                         box.appendChild(captionBox);
                         imageList.appendChild(box);
-
 
                         elementsProcessed++;
                         if (elementsProcessed === sorted.length) {
@@ -147,11 +137,19 @@ const loadJson = (term = '', ignore_case = false) => {
                 });
             }
         });
+};
 
-}
-
-window.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener('DOMContentLoaded', _ => {
     document.querySelectorAll('.alert').forEach((alert) => new bootstrap.Alert(alert));
+    toastDict = {
+        'toast-copied': new bootstrap.Toast(document.getElementById('toast-copied'), {
+            delay: 500,
+        }),
+        'toast-input-keyword': new bootstrap.Toast(document.getElementById('toast-input-keyword')),
+        'toast-clipboard-item': new bootstrap.Toast(document.getElementById('toast-clipboard-item'), {
+            autohide: false
+        })
+    };
 
     let ic = retrieveQueryDict()['ic'];
     if (ic) {
@@ -162,8 +160,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     let term = retrieveQueryDict()['term'];
     if (term) {
-        bootstrap.Alert.getInstance(document.getElementById('alert-input-keyword')).close();
-
         document.getElementById('icon-search-term').value = term;
 
         loadJson(
@@ -171,13 +167,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
             document.getElementById('icon-search-ignorecase').checked
         );
     } else {
-        document.getElementById('alert-input-keyword').classList.add('show');
-        setTimeout(() => {
-            bootstrap.Alert.getInstance(document.getElementById('alert-input-keyword')).close()
-        }, 3000);
+        toastDict['toast-input-keyword'].show();
     }
 
-    document.getElementById('icon-search').addEventListener('click', (event) => {
+    document.getElementById('icon-search').addEventListener('click', _ => {
         loadJson(
             document.getElementById('icon-search-term').value,
             document.getElementById('icon-search-ignorecase').checked
