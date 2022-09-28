@@ -152,7 +152,7 @@ window.addEventListener('DOMContentLoaded', _ => {
             autohide: false
         }),
         'toast-sources': new bootstrap.Toast(document.getElementById('toast-sources'), {
-            delay: 3000,
+            delay: 5000,
         })
     };
 
