@@ -145,11 +145,18 @@ window.addEventListener('DOMContentLoaded', _ => {
         'toast-copied': new bootstrap.Toast(document.getElementById('toast-copied'), {
             delay: 500,
         }),
-        'toast-input-keyword': new bootstrap.Toast(document.getElementById('toast-input-keyword')),
+        'toast-input-keyword': new bootstrap.Toast(document.getElementById('toast-input-keyword'), {
+            delay: 2000,
+        }),
         'toast-clipboard-item': new bootstrap.Toast(document.getElementById('toast-clipboard-item'), {
             autohide: false
+        }),
+        'toast-sources': new bootstrap.Toast(document.getElementById('toast-sources'), {
+            delay: 3000,
         })
     };
+
+    toastDict['toast-sources'].show();
 
     let ic = retrieveQueryDict()['ic'];
     if (ic) {
