@@ -36,7 +36,7 @@ const loadJson = (term = '', ignore_case = false) => {
                 return (element.type == 'blob' && element.path.startsWith('asset/') && element.path.includes('.png'));
             });
 
-            const filtered2 = filtered.filter((element) => {
+            let filtered2 = filtered.filter((element) => {
                 return ignore_case
                     ?
                     term.toLowerCase()
