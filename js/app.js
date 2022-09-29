@@ -54,7 +54,7 @@ const loadJson = (term = '', ignore_case = false) => {
             } else {
                 let conn = retrieveQueryDict()['conn'];
                 if (conn) {
-                    if (ic == 't') {
+                    if (conn == 't') {
                         console.log('conn');
                     } else {
                         filtered2 = filtered2.filter((element) => {
