@@ -52,6 +52,21 @@ const loadJson = (term = '', ignore_case = false) => {
             if (filtered2.length == 0) {
                 hideSpinner();
             } else {
+                let conn = retrieveQueryDict()['conn'];
+                if (conn) {
+                    if (ic == 't') {
+                        console.log('conn');
+                    } else {
+                        filtered2 = filtered2.filter((element) => {
+                            return (!element.path.includes('asset/Power_Platform_Connector/'));
+                        });
+                    }
+                } else {
+                    filtered2 = filtered2.filter((element) => {
+                        return (!element.path.includes('asset/Power_Platform_Connector/'));
+                    });
+                }
+
                 const sorted = filtered2.sort((a, b) => {
                     const na = a.path.toUpperCase();
                     const nb = b.path.toUpperCase();
