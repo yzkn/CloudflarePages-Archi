@@ -59208,6 +59208,3270 @@
       "path": "asset/Power_Platform_scalable/Power_Platform_Icons_FAQ.pdf",
       "type": "blob",
       "size": 104580
+    },
+    {
+      "path": "asset/Power_Platform_Connector/.gitkeep",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/10to8 Appointment Scheduling (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/365 Training (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/AIHW MyHospitals (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/AMEE Open Business (独立系発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/AWeber (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/AXtension コンテンツ ゲート.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Abortion Policy (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/AccuWeather (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Act! (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Acumatica (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Adobe Acrobat Sign.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Adobe Creative Cloud (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Adobe PDF Services.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Advanced Scraper (独立系発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Africa's Talking Airtime (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Africa's Talking SMS (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Africa's Talking Voice (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/AfterShip (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/AgilePoint NX.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Agilite (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Ahead.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/AikiDocs (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Airly (独立発行者).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Airmeet.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Airtable (独立発行者).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Alemba ITSM.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Aletheia.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Alkymi (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Ally (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Almabase (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Amazon Redshift (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Amazon S3.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Amazon SQS.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Ambee (独立系発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Apache Impala (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/App Power Forms (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Appfigures.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/AppsForOps Timeline (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Apptigent PowerTools LITE.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Apptigent PowerTools.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Aquaforest PDF.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/ArcGIS PaaS.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/ArcGIS.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Asana.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Asite (KSA) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Asite (UAE) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Asite (US Gov.).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Asite (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Assently E-Sign.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/AtBot Logic.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/AtBot 管理 (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Autodesk Forge Data Exchange (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/AvePoint Cloud Governance.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Aviationstack (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Azure AD Identity Protection (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Azure AD アイデンティティとアクセス (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Azure AD アプリの登録 (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Azure AD.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Azure App Service.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Azure Application Insights.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Azure Automation.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Azure Blob Storage.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Azure Cognitive Service for Language.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Azure Communication Services SMS.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Azure Communication Services アイデンティティ (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Azure Communication Services チャット (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Azure Communication Services メール (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Azure Container Instance.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Azure Cosmos DB.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Azure Data Explorer.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Azure Data Factory.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Azure Data Lake.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Azure DevOps.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Azure Event Grid Publish.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Azure Event Grid.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Azure File Storage.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Azure IoT Central V2 (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Azure IoT Central V3 (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Azure Key Vault.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Azure Log Analytics Data Collector.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Azure Log Analytics [非推奨] (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Azure Monitor Logs.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Azure Queues.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Azure Resource Manager.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Azure SQL Data Warehouse.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Azure Table Storage.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Azure VM.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/BIN Checker (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Badgr (独立発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Basecamp 2 (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Basecamp 3 (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Benchmark Email (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/BillsPLS (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Binance.us (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Bing Maps (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Bing Search (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Bitbucket (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Bitly.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/BitlyIP (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Bitvore Cellenus (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/BizTalkServer.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Blackbaud Church Management (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Blackbaud Raisers Edge NXT (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Blackbaud Raisers Edge NXT Constituents (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Blackbaud Raisers Edge NXT Documents (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Blackbaud Raisers Edge NXT Events (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Blackbaud Raisers Edge NXT Fundraising (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Blackbaud Raisers Edge NXT Gifts (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Blackbaud Raisers Edge NXT Interactions (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Blackbaud Raisers Edge NXT Lists (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Blackbaud Raisers Edge NXT Prospects (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Blackbaud SKY Add-ins (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Blogger (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Box.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Bttn ONE (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Buffer.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/BuildingMinds DigitalTwin Core (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Buy Me A Coffee (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/CDC Content Services (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/CDK Drive Customer (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/CDK Drive Service Vehicles (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/CGTrader (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/CO2 Signal (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/COSMO Bot (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/COVID-19 JHU CSSE (独立発行者).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/CPQSync (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/CPSC Recalls Retrieval (独立系発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/CQC Data (独立系発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/CRM Bot (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Calendar Pro (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/CandidateZip Resume Job Parser.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Capsule CRM.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Captisa Forms (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Carbon Intensity (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/CarbonFootprint (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/CardPlatform Adaptive Cards (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Cascade (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Casper365 for Education (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Centrical (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Chatter.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Chuck Norris IO (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Cisco Webex Meetings (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/CivicPlus Transform.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Clarity PPM 用 RegoLink.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Clearbit (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/ClickSend Postcards (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/ClickSend SMS (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/ClickUp Team Manager (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Climatiq (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Clockify (独立系発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Cloud BOT (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Cloud Connect Studio (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/CloudConvert.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Cloudmersive Currency (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Cloudmersive Data Validation (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Cloudmersive Document Conversion (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Cloudmersive File Processing (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Cloudmersive Image Processing.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Cloudmersive NLP (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Cloudmersive PDF.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Cloudmersive Security (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Cloudmersive Video and Media (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Cloudmersive Virus Scan (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Cloudmersive バーコード (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Cloverly (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Cognito Forms.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Cognizant Automation Center (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Coinbase (独立発行者).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Commercient (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Companies House (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Company Connect (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Computer Vision API.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Connect2All オンプレミス (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Connect2All.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/ConsenSys Ethereum (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Content Conversion (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Content Moderator.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/ConvertKit (独立系発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Converter by Power2Apps.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Corda Blockchain [非推奨] (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Corporate Buzzword Generator (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/CraftMyPDF (独立系発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Custom Vision.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/CyberProof (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Cyberday (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/D&amp;B Optimizer [非推奨] (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/D7SMS.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/DB2.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/DBF2XML (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/DHL Tracking (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/DPIRD Radar - West Australia (独立系発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/DPIRD Science - West Australia (独立系発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/DPIRD Weather - West Australia (独立系発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/DQ on Demand (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/DadJokesIO (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Data8 Data Enrichment.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/DataMotion (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/DataScope Forms.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Datamuse (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Decentraland (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Defender for Cloud Apps.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Derdack SIGNL4 (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/DeskDirector.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Desktop フロー.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Dexcom (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/DigitalHumani (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Discord (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Disqus.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Do Not Call Reported Calls (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Doc To PDF (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/DocFusion365 &ndash; SP (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/DocJuris.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Docparser.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/DocuSign Demo (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/DocuSign.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Document AI Konfuzio (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Document Merge.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/DocumentsCorePack.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Docurain (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Dokobit Portal (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/DomainTools Iris Enrich (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/DomainTools Iris Investigate (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Dropbox.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Dynamic Signal (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Dynamics 365 (非推奨) [非推奨].png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Dynamics 365 Business Central (設置型) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Dynamics 365 Business Central.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Dynamics 365 Commerce - 評価とレビュー (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Dynamics 365 Commerce Merchandising (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Dynamics 365 Customer Insights (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Dynamics 365 Customer Voice.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Dynamics 365 Fraud Protection (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Dynamics 365 Sales Insights.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Dynamics NAV (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Dynatrace (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/E-Sign.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/E-goi (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/EONET by NASA (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/EXPOCAD (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Easy Redmine.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/EasyVista Service Manager.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Easyship (独立系発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Easyvista Self Help (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Ecologi (独立発行者).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Eduframe (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Egnyte (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Eigen Events (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Elastic Forms (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/ElasticOCR [非推奨] (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Elead Product Reference Data (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Elead Sales Customers (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Elead Sales Opportunities (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Elfsquad Data.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Elfsquad Product Configurator.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/EmojiHub (独立発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Enadoc (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Encodian.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Engagement Cloud (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Entegrations.io (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Entersoft (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Envoy (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Ephesoft Semantik For Invoices.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Ethereum Blockchain [非推奨] (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Etsy (独立発行者).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Event Hubs.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Eventbrite.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Every (独立系発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Evocom.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Exasol (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Excel Online (Business).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Excel Online (OneDrive).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Excel [非推奨].png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Expensya (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Expiration Reminder.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/FHIRBase (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/FHIRClinical (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/FORCAM FORCE Bridge (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/FTP.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Face API.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/FactSet (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Fantasy Premier League (独立系発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Farsight DNSDB.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Federal Reserve Economic Data (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/File.io (独立系発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Fin &amp; Ops Apps (Dynamics 365).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Finnish BIS (独立系発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Finnish Railway Traffic (独立系発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/FireText.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Flic.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Flotiq headless CMS (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/FlowForma (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/FlowForma V2 (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Fluid Kinnectorz for Procore (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Form Recognizer.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Formstack Documents.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Formstack Forms.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/FreeAgent (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/FreshBooks (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Freshdesk.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Freshservice (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/GeoDB (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/GetAccept.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/GetMyInvoices (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/GitHub.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/GitLab (独立発行者).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Givebutter (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/GlobalGiving プロジェクト (独立系発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Gmail.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/GoFileRoom.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/GoQR (独立発行者).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/GoToMeeting (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/GoToTraining.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/GoToWebinar.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Google Calendar.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Google Cloud Translation (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Google Contacts.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Google Drive.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Google Sheets.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Google Tasks.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Gratavid (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Gravity Forms by reenhanced.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/GroupMgr (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/HR Cloud (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/HTTP with Azure AD.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/HYAS Insight (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Harness PDFx (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Harvest.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Hashify (Independent Publisher).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Have I Been Pwned (独立系発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/HelloSign.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/HipChat (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/HitHorizons.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/HotProfile (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/HouseRater QA (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/HrFlow.ai (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/HubSpot CMS (独立系発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/HubSpot CRM (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/HubSpot Marketing (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Huddle for US Gov &amp; Healthcare (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Huddle.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Huddo Boards.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Hunter (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/IA-Connect Dynamic Code (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/IA-Connect JML.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/IA-Connect Java (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/IA-Connect Mainframe (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/IA-Connect Microsoft Office (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/IA-Connect SAP GUI (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/IA-Connect Session.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/IA-Connect UI.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/IA-Connect Web Browser.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/ID Analyzer (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/IN-D Aadhaar Number Masking (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/IN-D Face Match (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/IN-D Insurance (ICD10 &amp; CPT) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/IN-D Invoice Data Capture (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/IN-D KYC India (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/IN-D Payables (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/IPQS Fraud and Risk Scoring.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/ITGlue (独立発行者).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/ITautomate (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Ice and Fire (Game of Thrones) (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Icon Horse (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Ideanote (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Impexium.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Imprezian360-CRM (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/InEight (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Industrial App Store.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/InfoShare.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Infobip.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Informix (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Infura Ethereum (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Infusionsoft.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Inoreader.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Insightly (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Instapaper.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Integrable PDF (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Integration Toolbox (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Intercom (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/JIRA Search (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/JIRA.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Jedox OData Hub.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/JotForm Enterprise.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/JotForm.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/JungleMail 365 (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/K2 Workflow (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Kanban Tool (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Kanbanize (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/KnowledgeLake (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Knowledgeone RecFind6 (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/LIFX.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/LINK Mobility.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/LMS365.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/LUIS.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Lang.ai.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Language - Question Answering.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Lansweeper App For Sentinel (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Lasso X.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/LatinShare Documents (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/LatinShare SHP Management (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/LatinShare SHP Permissions (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Launch Library 2 (独立発行者).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Lawlift.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/LeadDesk (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/LeanKit.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/LegalBot AI Tools (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Lettria GDPR Compliance (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/LibreBor (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/LinkedIn V2.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/LinkedIn [非推奨] (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Lit Ipsum (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/LiveChat (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/LiveTiles Bots.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Loripsum (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/MOBSIM SMS 送信 (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/MS グラフ グループとユーザー.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/MSN ウェザー.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/MURAL (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/MailChimp.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/MailJet (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/MailParser.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/MailboxValidator (Independent Publisher).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Mandrill.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Map Pro (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Mapbox (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Marketing Content Hub (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Marketo (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Mavim-iMprove (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Medallia.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/MeetingRoomMap (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Meme (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Mensagia (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Metatask (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Michael Scott Quotes (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Microsoft 365 Apps Health [非推奨] (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Microsoft 365 コンプライアンス (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Microsoft 365 メッセージ センター (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Microsoft Bookings (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Microsoft D365CE v9 OnPrem (独立した発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Microsoft Dataverse (レガシ).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Microsoft Dataverse.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Microsoft Defender ATP.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Microsoft Forms.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Microsoft Graph Security (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Microsoft Kaizala (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Microsoft School Data Sync (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Microsoft StaffHub [非推奨] (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Microsoft Teams 用 Shifts.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Microsoft Teams.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Microsoft To-Do (Business).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Microsoft Translator V2.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Microsoft Translator [非推奨].png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Miro (独立発行者).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Mitto (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/MobilyWS (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Mockaroo (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/ModuleQ (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Moosend (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/MotaWord Translations (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Motimate (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Mtarget SMS.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Muhimbi PDF.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/My Acclaro (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/MySQL.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/NASA Image and Video Library (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/NEOWs (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/NHTSA vPIC (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/NIST NVD (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/National Park Service (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Nationalize_io (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Nederlandse Spoorwegen (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/NetDocuments.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/New York Times (Independent Publisher).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Nexmo.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Nextcom (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Nifty Gateway (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Nitro.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Nodefusion Portal (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Notiivy Browser Notifications (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Notion (Independent Publisher).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/OK dokument (独立系発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/ORB Intelligence (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Objective Connect (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Occuspace (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Office 365 Groups Mail.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Office 365 Groups.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Office 365 Outlook.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Office 365 Users.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Office 365 Video [非推奨] (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/OneBlink.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/OneDrive for Business.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/OneDrive.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/OneNote (Business).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/OneNote Consumer (独立系発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Oneflow (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Open Charge Map (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Open Experience (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/OpenAI (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/OpenCage Geocoding (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/OpenNEM (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/OpenText Content Server by One Fox.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/OpenText Core Share by One Fox.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/OpenText eDOCS by One Fox.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/OptiAPI (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Oracle Database.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Ordnance Survey Places (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Otto.bot (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Outlook Tasks.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Outlook.com.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/PDF Blocks.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/PDF4me Connect.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/PDF4me SwissQR (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/PDF4me.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/PDFco (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/PDFcross (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/PIPware KPIs.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/PPM エクスプレス (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/PUG Gamified Engagement (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/PagerDuty (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Pantry (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Panviva.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Parserr (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Parseur.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Partner Center Events (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Partner Center Referrals (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Paylocity (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Peltarion AI.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Pexels (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Philips HUE (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Pilot Things (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Pinterest.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Pipedrive.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Pitney Bowes Data Validation [非推奨] (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Pitney Bowes Tax Calculator [非推奨] (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Pivotal Tracker.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Placedog (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Planner.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Plivo (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Plumsail Documents.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Plumsail Forms.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Plumsail HelpDesk.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Plumsail SP.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Poka.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Polaris PSA (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/PoliteMail.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/PostgreSQL.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Powell Teams (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Power Apps Notification V2.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Power Apps Notification.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Power Apps for Admins.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Power Apps for Makers.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Power Automate for Admins.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Power Automate 管理.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Power BI.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Power Form 7.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Power Platform for Admins.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Power Query Dataflows.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Power Virtual Agents (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/ProPublica Campaign Finance (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/ProPublica Congress (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/ProPublica Nonprofit Explorer (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Process Street.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Project Online.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Project Roadmap (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/ProjectWise Design Integration (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Projectplace.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Projectum Present It (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Projectwise Share [非推奨] (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Public 360 (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Pure Leads (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Pushcut (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/QnA Maker (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Quickbase (独立開発者).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/RAPID Platform.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/REST Countries (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/RSS.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Rarible (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Reachability (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Rebrandly (独立系発行元).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Recorded Future (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Redmine (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Refuge Restrooms (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/RegEx Matching (独立発行者).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/ReliefWeb (独立発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Rencore Code (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Rencore Governance (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Replicon (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Resco Cloud.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/RescueGroups (独立系発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Revelation helpdesk.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/ReversingLabs Intelligence (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Revue (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Rijksoverheid (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/RiskIQ (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/RiskIQ Digital Footprint (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/RiskIQ Illuminate.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Robohash (独立系発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Robolytix (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Robots for Power BI (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Ron Swanson Quotes (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/SAP ERP.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/SAS デシジョニング (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/SECIB (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/SFTP - SSH.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/SFTP [非推奨].png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/SHRTCODE (独立系発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/SMSAPI (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/SMSLink (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/SMTP.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/SOLYP (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/SOS Inventory (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/SQL Server.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Salesforce.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/ScanCloud (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Schiphol Airport (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/SchoolDigger (独立系発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Scrive eSign.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Secret Server (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Secure Code Warrior (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/SeeBotRun - Link (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/SeekTable (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Seismic (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/SendGrid.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Sendmode (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Serverless360 BAM &amp; Tracking (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Service Objects (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/ServiceNow.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/SerwerSMS.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Sessionize (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Shadify (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Share-Effect.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/SharePoint.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Shields.io (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/ShipStation IP (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Short URL.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Showcase Workshop (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Sigma Conso CR (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/SignNow (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/SignRequest (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/SignUpGenius (独立系発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/SigningHub (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/SkyPoint Cloud (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Skype for Business Online [非推奨] (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Slack.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Slascone (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Smarp (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/SmartDialog.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Smartsheet.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Sociabble (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Soft1.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Softools (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/SparkPost.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Spinpanel (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Spotify (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Spotify (独立系発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Spring Global (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Square Business (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Square Payments (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/StaffCircle (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Staffbase (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Star Wars (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Storm Glass (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Stormboard (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Strava (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Stripe.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Studio Ghibli (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Survey123.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/SurveyMonkey (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/TDox (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/TPC Portal (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/TRIGGERcmd.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Tago (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Talkdesk (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Tallyfy (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/TeamWherx.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Teamwork Projects (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/TeleSign SMS.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Telegram Bot (独立発行者).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Telephony Xtended Serv Interf (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Teradata.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Tesseron ASM Ticket (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Text Analytics (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/The Br&oslash;nn&oslash;ysund Registries (独立した発行元).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/The Lord of the Rings (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/The Weather Channel (独立系発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Ticketing.events.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Tikit (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Tilkee (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Todoist.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Toggl Plan (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Toodledo.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Traction Guest (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Transform2All.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Trello.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Tribal (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/TrueDialog SMS (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Trustual (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/TuxMailer (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Twilio.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Twitter.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/TxtSync (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Typeform (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/UK Bank Holidays (独立発行者).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/UK Check VAT (独立系発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/USGS Earthquake Hazards (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Uber Freight (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Ubiqod by Skiply.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Udemy (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Unix Timestamp (独立発行者).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Unsplash (独立発行者).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/UrLBae (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/UserVoice (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/VIES (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Vantage 365 Imaging (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Varuna (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Vena Solutions (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Viafirma (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Video Indexer (V2).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Vimeo.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Vineforce (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Vocean (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Vonage (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Waaila (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Weather Forecast (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Webex (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/WenDocs Linker (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/What3Words (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/WithoutWire Inventory Platform (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Witivio.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/WooCommerce (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Word Cloud by Textvis (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Word Online (Business).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/WordPress.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/WorkPoint.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/WorkSpan.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Workday HCM (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/WorldTime (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/XSOAR (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Xbridger Document Manager.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Xooa Blockchain Database (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Xooa Blockchain Smart Contract (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Xpertdoc.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/YakChat (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Yammer.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Yarado (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Yeeflow.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Yeelight (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Yelp (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/You Need A Budget (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/YouTube.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Zahara.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Zanran Scaffolder (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Zendesk.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Zenkraft (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Zenler (独立系発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Zippopotamus (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Zoho Sign (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Zoom Meetings (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/Zvanu Parvaldnieks (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/airSlate (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/allGeo.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/boomapp connect.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/bttn (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/cioplenu (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/connpass (独立系発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/d.velop.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/dox42.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/emfluence Marketing Platform (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/iAuditor (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/iManage Work (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/iObeya.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/icanhazdadjoke (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/inQuba Journey (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/intelliHR (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/kintone (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/mondaycom (Independent Publisher) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/myStrom (Independent Publisher).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/nps.today (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/nunify (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/openFDA Drug (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/r SpaceX (独立発行者) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/sms77io.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/timeghost.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/tyntec 2FA (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/tyntec Portability Check (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/tyntec SMS Business.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/tyntec Viber Business (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/tyntec WhatsApp Business.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/xkcd (独立系発行元) (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/zReports (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/}exghts gen. Document &amp; more (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/ウイルストータル (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/ウェイ ウィ ドゥ.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/カレンドリー(プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/キャンプファイア (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/クラウド PKI マネジメント (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/コネクティブ eSignatures (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/サービス バス.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/データブレンド (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/パワー アシスト (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/ファイル システム.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/プライオリティ マトリクス.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/プログレッサス アドバンスト プロジェクト (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/ミディアム.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/メンサジア (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/メール.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/リード ローダー (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/レコーデッド フューチャー V2 (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/レコーデッド フューチャー アイデンティティ (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/ヴェンティピックス アセット アンド インベントリー (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/承認.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/認証済.png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/通知 .png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/連絡先 Pro (プレビュー).png",
+      "type": "blob"
+    },
+    {
+      "path": "asset/Power_Platform_Connector/非公式の Netflix 検索 (独立系出版社) (プレビュー).png",
+      "type": "blob"
     }
   ]
 }
