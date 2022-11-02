@@ -33,7 +33,7 @@ const loadJson = (term = '', ignore_case = false) => {
         .then(response => response.json())
         .then(json => {
             const filtered = json.tree.filter((element) => {
-                return (element.type == 'blob' && element.path.startsWith('asset/') && element.path.includes('.png'));
+                return (element.path.startsWith('asset/') && element.path.includes('.png'));
             });
 
             let filtered2 = filtered.filter((element) => {
