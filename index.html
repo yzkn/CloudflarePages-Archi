@@ -57,31 +57,41 @@
                     target="_blank">about:config</a>から<code>dom.events.asyncClipboard.clipboardItem</code>を有効化してください。
             </div>
         </div>
-        <div id="toast-sources" class="toast hide bg-light" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="toast-body">
-                Sources:
-                <div class="list-group">
-                    <a href="https://aws.amazon.com/jp/architecture/icons/" target="_blank"
-                        class="list-group-item list-group-item-light"> AWS
-                    </a>
-                    <a href="https://learn.microsoft.com/ja-jp/azure/architecture/icons/" target="_blank"
-                        class="list-group-item list-group-item-light">Azure</a>
-                    <a href="https://learn.microsoft.com/ja-jp/dynamics365/get-started/icons" target="_blank"
-                        class="list-group-item list-group-item-light">Dynamics 365</a>
-                    <a href="https://github.com/kubernetes/community/tree/master/icons" target="_blank"
-                        class="list-group-item list-group-item-light">Kubernetes</a>
-                    <a href="https://github.com/gilbarbara/logos" target="_blank"
-                        class="list-group-item list-group-item-light">Logos</a>
-                    <a href="https://github.com/Roemer/plantuml-office" target="_blank"
-                        class="list-group-item list-group-item-light">Office</a>
-                    <a href="https://www.opensecurityarchitecture.org/cms/library/icon-library" target="_blank"
-                        class="list-group-item list-group-item-light">Open Security Architecture</a><a
-                        href="https://learn.microsoft.com/ja-jp/power-platform/guidance/icons" target="_blank"
-                        class="list-group-item list-group-item-light">Power Platform</a>
+    </div>
+
+    <div class="modal fade" id="sourceModal" tabindex="-1" aria-labelledby="sourceModalLabel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="sourceModalLabel">Sources</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
                 </div>
-                <div class="mt-2 pt-2 border-top text-end">
-                    <button type="button" class="btn btn-sm btn-outline-secondary"
-                        data-bs-dismiss="toast">Close</button>
+                <div class="modal-body">
+                    <div class="list-group">
+                        <a href="https://aws.amazon.com/jp/architecture/icons/" target="_blank"
+                            class="list-group-item list-group-item-light"> AWS
+                        </a>
+                        <a href="https://learn.microsoft.com/ja-jp/azure/architecture/icons/" target="_blank"
+                            class="list-group-item list-group-item-light">Azure</a>
+                        <a href="https://learn.microsoft.com/ja-jp/dynamics365/get-started/icons" target="_blank"
+                            class="list-group-item list-group-item-light">Dynamics 365</a>
+                        <a href="https://github.com/kubernetes/community/tree/master/icons" target="_blank"
+                            class="list-group-item list-group-item-light">Kubernetes</a>
+                        <a href="https://github.com/gilbarbara/logos" target="_blank"
+                            class="list-group-item list-group-item-light">Logos</a>
+                        <a href="https://fonts.google.com/icons" target="_blank"
+                            class="list-group-item list-group-item-light">Material
+                            Symbols</a>
+                        <a href="https://github.com/Roemer/plantuml-office" target="_blank"
+                            class="list-group-item list-group-item-light">Office</a>
+                        <a href="https://www.opensecurityarchitecture.org/cms/library/icon-library" target="_blank"
+                            class="list-group-item list-group-item-light">Open Security Architecture</a><a
+                            href="https://learn.microsoft.com/ja-jp/power-platform/guidance/icons" target="_blank"
+                            class="list-group-item list-group-item-light">Power Platform</a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
                 </div>
             </div>
         </div>
@@ -121,6 +131,11 @@
                 YA All rights reserved.
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 ご意見・ご感想は<a href="https://forms.gle/dxmFoszAhgw68Q4F8" target="_blank">こちら</a>へ。
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" class="btn btn btn-outline-info btn-sm" data-bs-toggle="modal"
+                    data-bs-target="#sourceModal">
+                    出典
+                </button>
             </div>
         </footer>
     </div>

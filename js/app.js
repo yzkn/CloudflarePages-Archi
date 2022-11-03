@@ -4,6 +4,11 @@
 const apiUri = 'list.json';
 const baseUri = 'https://archit.pages.dev/';
 
+const materialIconsBaseUri1 = 'https://raw.githubusercontent.com/google/'
+const materialIconsBaseUri2 = 'material-design-icons/'
+const materialIconsBaseUri3 = 'master/png/'
+const materialIconsBaseUri = materialIconsBaseUri1 + materialIconsBaseUri2 + materialIconsBaseUri3 // https://raw.githubusercontent.com/google/material-design-icons/master/png/
+
 let queries;
 let toastDict;
 
@@ -32,11 +37,7 @@ const loadJson = (term = '', ignore_case = false) => {
     fetch(apiUri)
         .then(response => response.json())
         .then(json => {
-            const filtered = json.tree.filter((element) => {
-                return (element.path.startsWith('asset/') && element.path.includes('.png'));
-            });
-
-            let filtered2 = filtered.filter((element) => {
+            let filtered = json.tree.filter((element) => {
                 return ignore_case
                     ?
                     term.toLowerCase()
@@ -54,19 +55,19 @@ const loadJson = (term = '', ignore_case = false) => {
                 if (conn == 't') {
                     console.log('conn');
                 } else {
-                    filtered2 = filtered2.filter((element) => {
+                    filtered = filtered.filter((element) => {
                         return (!element.path.includes('asset/Power_Platform_Connector/'));
                     });
                 }
             } else {
-                filtered2 = filtered2.filter((element) => {
+                filtered = filtered.filter((element) => {
                     return (!element.path.includes('asset/Power_Platform_Connector/'));
                 });
             }
-            if (filtered2.length == 0) {
+            if (filtered.length == 0) {
                 hideSpinner();
             } else {
-                const sorted = filtered2.sort((a, b) => {
+                const sorted = filtered.sort((a, b) => {
                     const na = a.path.toUpperCase();
                     const nb = b.path.toUpperCase();
                     if (na < nb) {
@@ -147,7 +148,7 @@ const loadJson = (term = '', ignore_case = false) => {
                     img.crossOrigin = "anonymous";
                     img.title = element.path;
 
-                    img.src = baseUri + element.path;
+                    img.src = element.path.startsWith(materialIconsBaseUri2) ? element.path.replace(materialIconsBaseUri2, materialIconsBaseUri) : (baseUri + element.path);
                 });
             }
         });
@@ -164,13 +165,8 @@ window.addEventListener('DOMContentLoaded', _ => {
         }),
         'toast-clipboard-item': new bootstrap.Toast(document.getElementById('toast-clipboard-item'), {
             autohide: false
-        }),
-        'toast-sources': new bootstrap.Toast(document.getElementById('toast-sources'), {
-            delay: 5000,
         })
     };
-
-    toastDict['toast-sources'].show();
 
     let ic = retrieveQueryDict()['ic'];
     if (ic) {
