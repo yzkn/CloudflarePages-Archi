@@ -166,6 +166,12 @@ const parseJson = (term = '', ignore_case = false) => {
 };
 
 window.addEventListener('DOMContentLoaded', _ => {
+    document.getElementById('icon-search-ignorecase').addEventListener('change', _ => {
+        const checked = document.getElementById('icon-search-ignorecase').checked;
+        document.getElementById('icon-search-ignorecase-label').innerText = "大文字/小文字を区別"
+            + (checked ? "しない" : "する");
+    });
+
     document.querySelectorAll('.alert').forEach((alert) => new bootstrap.Alert(alert));
     toastDict = {
         'toast-copied': new bootstrap.Toast(document.getElementById('toast-copied'), {

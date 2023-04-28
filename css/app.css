@@ -24,3 +24,15 @@
 #icon-search {
     width: 140px;
 }
+
+#icon-search-term {
+    width: 480px;
+}
+
+#icon-search-ignorecase-switch {
+    width: 240px
+}
+
+#icon-search-ignorecase-label {
+    font-size: x-small;
+}
