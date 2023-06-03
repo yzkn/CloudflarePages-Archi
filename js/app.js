@@ -1,4 +1,4 @@
-// Copyright (c) 2022 YA All rights reserved.
+// Copyright (c) 2023 YA All rights reserved.
 
 
 const apiUri = 'list.json';
