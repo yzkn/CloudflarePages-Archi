@@ -31,18 +31,36 @@ const hideSpinner = () => {
     document.getElementById('icon-search').disabled = false;
 };
 
-const initAutocomplete = () => {
-    if (stored != null) {
-        const searchList = document.getElementById('search-list');
-        const treeItems = stored.tree;
-        treeItems.forEach(element => {
-            const option = document.createElement('option');
-            const item = element.path.replaceAll('/', ' ').replace('.png', '').replace('.svg', '');
-            const ssv = item.split(' ');
-            option.value = ssv[1] + ' ' + ssv[ssv.length - 1];
-            searchList.appendChild(option);
-        });
-    }
+const loadDataSource = () => {
+    const items = [
+        { "url": "https://aws.amazon.com/jp/architecture/icons/", "name": "AWS" },
+        { "url": "https://cloud.google.com/icons?hl=ja", "name": "Google Cloud" },
+        { "url": "https://emojipedia.org/microsoft/", "name": "Segoe UI Emojis" },
+        { "url": "https://fasttrack.microsoft.com/v2/en-us/resources", "name": "Microsoft Office App Icons" },
+        { "url": "https://fonts.google.com/icons", "name": "Material Symbols" },
+        { "url": "https://github.com/Roemer/plantuml-office", "name": "Office" },
+        { "url": "https://github.com/gilbarbara/logos", "name": "Logos" },
+        { "url": "https://github.com/kubernetes/community/tree/master/icons", "name": "Kubernetes" },
+        { "url": "https://github.com/microsoft/PowerBI-Icons", "name": "Power BI Icons" },
+        { "url": "https://learn.microsoft.com/ja-jp/azure/architecture/icons/", "name": "Azure" },
+        { "url": "https://learn.microsoft.com/ja-jp/dynamics365/get-started/icons", "name": "Dynamics 365" },
+        { "url": "https://learn.microsoft.com/ja-jp/power-platform/guidance/icons", "name": "Power Platform" },
+        { "url": "https://news.microsoft.com/imagegallery/?filter_cats%5B%5D=2333", "name": "Microsoft Logos" },
+        { "url": "https://www.microsoft.com/en-us/download/details.aspx?id=35825", "name": "Visual Studio Image Library" },
+        { "url": "https://www.opensecurityarchitecture.org/cms/library/icon-library", "name": "Open Security Architecture" },
+        { "url": "https://www.cisco.com/c/en/us/about/brand-center/network-topology-icons.html", "name": "Cisco Network Topology Icons" },
+        { "url": "https://knowledge.sakura.ad.jp/4724/", "name": "さくらのアイコンセット" },
+        { "url": "https://network.yamaha.com/support/download/tool#network_iconset", "name": "ヤマハ" },
+        { "url": "https://future-architect.github.io/articles/20160721/", "name": "Future" }
+    ];
+
+    const datasourceList = document.getElementById('datasource-list');
+    items.sort((a, b) => a.name > b.name ? 1 : -1).forEach(item => {
+        let datasourceItem = document.createElement('div');
+        datasourceItem.classList.add('list-group');
+        datasourceItem.innerHTML = '<a href="' + item.url + '" target="_blank" class="list-group-item list-group-item-light"> ' + item.name + '</a>';
+        datasourceList.appendChild(datasourceItem);
+    });
 };
 
 const loadJson = (term = '', ignore_case = false) => {
@@ -56,6 +74,20 @@ const loadJson = (term = '', ignore_case = false) => {
                 parseJson(term, ignore_case)
                 initAutocomplete()
             });
+    }
+};
+
+const initAutocomplete = () => {
+    if (stored != null) {
+        const searchList = document.getElementById('search-list');
+        const treeItems = stored.tree;
+        treeItems.forEach(element => {
+            const option = document.createElement('option');
+            const item = element.path.replaceAll('/', ' ').replace('.png', '').replace('.svg', '');
+            const ssv = item.split(' ');
+            option.value = ssv[1] + ' ' + ssv[ssv.length - 1];
+            searchList.appendChild(option);
+        });
     }
 };
 
@@ -197,9 +229,8 @@ const parseJson = (term = '', ignore_case = false) => {
 
                 img.alt = element.path;
                 img.className = 'img-thumbnail';
-                img.crossOrigin = "anonymous";
+                img.crossOrigin = 'anonymous';
                 img.title = element.path;
-
                 img.src = element.path.startsWith(materialIconsBaseUri2) ? element.path.replace(materialIconsBaseUri2, materialIconsBaseUri) : (baseUri + element.path);
             });
         }
@@ -207,6 +238,8 @@ const parseJson = (term = '', ignore_case = false) => {
 };
 
 window.addEventListener('DOMContentLoaded', _ => {
+    loadDataSource();
+
     document.getElementById('icon-search-ignorecase').addEventListener('change', _ => {
         const checked = document.getElementById('icon-search-ignorecase').checked;
         document.getElementById('icon-search-ignorecase-label').innerText = "大文字/小文字を区別"
