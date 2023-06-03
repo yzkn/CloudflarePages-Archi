@@ -14,6 +14,8 @@ let toastDict;
 
 let stored = null;
 
+const basename = path => path.split('/').pop().split('.').shift();
+
 const retrieveQueryDict = () => {
     const urlSearchParams = new URLSearchParams(window.location.search);
     return Object.fromEntries(urlSearchParams.entries());
@@ -144,9 +146,27 @@ const parseJson = (term = '', ignore_case = false) => {
                 captionLabel.style.backgroundColor = 'rgba(0, 0, 0, 0.3)';
                 captionLabel.style.fontSize = '10px';
 
+                let nameBox = document.createElement('div');
+                nameBox.classList.add('position-absolute');
+                nameBox.classList.add('top-0');
+                nameBox.classList.add('w-100');
+
+                let nameLabel = document.createElement('p');
+                nameLabel.classList.add('m-0');
+                nameLabel.classList.add('p-0');
+                nameLabel.classList.add('text-start');
+                nameLabel.classList.add('text-nowrap');
+                nameLabel.classList.add('text-light');
+                nameLabel.innerText = basename(element.path);
+                nameLabel.style.transform = "scale(0.5)";
+                nameLabel.style.transformOrigin = "0 0";
+                nameLabel.style.fontSize = '10px';
+
                 box.appendChild(img);
                 captionBox.appendChild(captionLabel);
                 box.appendChild(captionBox);
+                nameBox.appendChild(nameLabel);
+                box.appendChild(nameBox);
                 imageList.appendChild(box);
 
                 elementsProcessed++;
