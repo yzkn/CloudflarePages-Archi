@@ -33,25 +33,82 @@ const hideSpinner = () => {
 
 const loadDataSource = () => {
     const items = [
-        { "url": "https://aws.amazon.com/jp/architecture/icons/", "name": "AWS" },
-        { "url": "https://cloud.google.com/icons?hl=ja", "name": "Google Cloud" },
-        { "url": "https://emojipedia.org/microsoft/", "name": "Segoe UI Emojis" },
-        { "url": "https://fasttrack.microsoft.com/v2/en-us/resources", "name": "Microsoft Office App Icons" },
-        { "url": "https://fonts.google.com/icons", "name": "Material Symbols" },
-        { "url": "https://github.com/Roemer/plantuml-office", "name": "Office" },
-        { "url": "https://github.com/gilbarbara/logos", "name": "Logos" },
-        { "url": "https://github.com/kubernetes/community/tree/master/icons", "name": "Kubernetes" },
-        { "url": "https://github.com/microsoft/PowerBI-Icons", "name": "Power BI Icons" },
-        { "url": "https://learn.microsoft.com/ja-jp/azure/architecture/icons/", "name": "Azure" },
-        { "url": "https://learn.microsoft.com/ja-jp/dynamics365/get-started/icons", "name": "Dynamics 365" },
-        { "url": "https://learn.microsoft.com/ja-jp/power-platform/guidance/icons", "name": "Power Platform" },
-        { "url": "https://news.microsoft.com/imagegallery/?filter_cats%5B%5D=2333", "name": "Microsoft Logos" },
-        { "url": "https://www.microsoft.com/en-us/download/details.aspx?id=35825", "name": "Visual Studio Image Library" },
-        { "url": "https://www.opensecurityarchitecture.org/cms/library/icon-library", "name": "Open Security Architecture" },
-        { "url": "https://www.cisco.com/c/en/us/about/brand-center/network-topology-icons.html", "name": "Cisco Network Topology Icons" },
-        { "url": "https://knowledge.sakura.ad.jp/4724/", "name": "さくらのアイコンセット" },
-        { "url": "https://network.yamaha.com/support/download/tool#network_iconset", "name": "ヤマハ" },
-        { "url": "https://future-architect.github.io/articles/20160721/", "name": "Future" }
+        {
+            "url": "https://aws.amazon.com/jp/architecture/icons/",
+            "name": "AWS"
+        },
+        {
+            "url": "https://cloud.google.com/icons?hl=ja",
+            "name": "Google Cloud"
+        },
+        {
+            "url": "https://emojipedia.org/microsoft/",
+            "name": "Segoe UI Emojis"
+        },
+        {
+            "url": "https://fasttrack.microsoft.com/v2/en-us/resources",
+            "name": "Microsoft Office App Icons"
+        },
+        {
+            "url": "https://fonts.google.com/icons",
+            "name": "Material Symbols"
+        },
+        {
+            "url": "https://github.com/Roemer/plantuml-office",
+            "name": "Office"
+        },
+        {
+            "url": "https://github.com/gilbarbara/logos",
+            "name": "Logos"
+        },
+        {
+            "url": "https://github.com/kubernetes/community/tree/master/icons",
+            "name": "Kubernetes"
+        },
+        {
+            "url": "https://github.com/microsoft/PowerBI-Icons",
+            "name": "Power BI Icons"
+        },
+        {
+            "url": "https://learn.microsoft.com/ja-jp/azure/architecture/icons/",
+            "name": "Azure"
+        },
+        {
+            "url": "https://learn.microsoft.com/ja-jp/dynamics365/get-started/icons",
+            "name": "Dynamics 365"
+        },
+        {
+            "url": "https://learn.microsoft.com/ja-jp/power-platform/guidance/icons",
+            "name": "Power Platform"
+        },
+        {
+            "url": "https://news.microsoft.com/imagegallery/?filter_cats%5B%5D=2333",
+            "name": "Microsoft Logos"
+        },
+        {
+            "url": "https://www.microsoft.com/en-us/download/details.aspx?id=35825",
+            "name": "Visual Studio Image Library"
+        },
+        {
+            "url": "https://www.opensecurityarchitecture.org/cms/library/icon-library",
+            "name": "Open Security Architecture"
+        },
+        {
+            "url": "https://www.cisco.com/c/en/us/about/brand-center/network-topology-icons.html",
+            "name": "Cisco Network Topology Icons"
+        },
+        {
+            "url": "https://knowledge.sakura.ad.jp/4724/",
+            "name": "さくらのアイコンセット"
+        },
+        {
+            "url": "https://network.yamaha.com/support/download/tool#network_iconset",
+            "name": "ヤマハ"
+        },
+        {
+            "url": "https://future-architect.github.io/articles/20160721/",
+            "name": "Future"
+        }
     ];
 
     const datasourceList = document.getElementById('datasource-list');
