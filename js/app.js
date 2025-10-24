@@ -9,6 +9,8 @@ const materialIconsBaseUri2 = 'material-design-icons/'
 const materialIconsBaseUri3 = 'master/png/'
 const materialIconsBaseUri = materialIconsBaseUri1 + materialIconsBaseUri2 + materialIconsBaseUri3 // https://raw.githubusercontent.com/google/material-design-icons/master/png/
 
+const msLearnIconBaseUri = 'https://msico.pages.dev/';
+
 let queries;
 let toastDict;
 
@@ -288,7 +290,7 @@ const parseJson = (term = '', ignore_case = false) => {
                 img.className = 'img-thumbnail';
                 img.crossOrigin = 'anonymous';
                 img.title = element.path;
-                img.src = element.path.startsWith(materialIconsBaseUri2) ? element.path.replace(materialIconsBaseUri2, materialIconsBaseUri) : (baseUri + element.path);
+                img.src = element.path.startsWith(msLearnIconBaseUri) ? element.path : (element.path.startsWith(materialIconsBaseUri2) ? element.path.replace(materialIconsBaseUri2, materialIconsBaseUri) : (baseUri + element.path));
             });
         }
     }
