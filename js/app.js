@@ -73,11 +73,19 @@ const loadDataSource = () => {
         },
         {
             "url": "https://learn.microsoft.com/ja-jp/azure/architecture/icons/",
-            "name": "Azure"
+            "name": "Azure アイコン"
         },
         {
             "url": "https://learn.microsoft.com/ja-jp/dynamics365/get-started/icons",
-            "name": "Dynamics 365"
+            "name": "Microsoft Dynamics 365 アイコン"
+        },
+        {
+            "url": "https://learn.microsoft.com/ja-jp/entra/architecture/architecture-icons",
+            "name": "[Microsoft Entra ID アーキテクチャ アイコン"
+        },
+        {
+            "url": "https://learn.microsoft.com/ja-jp/fabric/fundamentals/icons",
+            "name": "Microsoft Fabric アイコン"
         },
         {
             "url": "https://learn.microsoft.com/ja-jp/power-platform/guidance/icons",
@@ -86,6 +94,10 @@ const loadDataSource = () => {
         {
             "url": "https://news.microsoft.com/imagegallery/?filter_cats%5B%5D=2333",
             "name": "Microsoft Logos"
+        },
+        {
+            "url": "https://learn.microsoft.com/ja-jp/microsoft-365/solutions/architecture-icons-templates",
+            "name": "Microsoft 365 アーキテクチャのアイコンとテンプレート"
         },
         {
             "url": "https://www.microsoft.com/en-us/download/details.aspx?id=35825",
