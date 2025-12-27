@@ -178,11 +178,11 @@ const parseJson = (term = '', ignore_case = false) => {
                 ?
                 term.toLowerCase()
                     .split(/\s+/)
-                    .map(t => element.path.toLowerCase().includes(t))
+                    .map(t => element.path.toLowerCase().includes(t) || element.description.includes(t))
                     .every(t => t === true)
                 :
                 term.split(/\s+/)
-                    .map(t => element.path.includes(t))
+                    .map(t => element.path.includes(t) || element.description.includes(t))
                     .every(t => t === true)
         });
 
@@ -330,7 +330,7 @@ const parseJson = (term = '', ignore_case = false) => {
                 img.alt = element.path;
                 img.className = 'img-thumbnail';
                 img.crossOrigin = 'anonymous';
-                img.title = element.path;
+                img.title = element.path + "\n---\n" + element.description + "\n（クリックしてクリップボードにコピー）";
                 img.src = element.path.startsWith(msLearnIconBaseUri) ? element.path : (element.path.startsWith(materialIconsBaseUri2) ? element.path.replace(materialIconsBaseUri2, materialIconsBaseUri) : (baseUri + element.path));
             });
         }
