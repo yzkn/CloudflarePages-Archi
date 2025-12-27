@@ -231,7 +231,6 @@ const parseJson = (term = '', ignore_case = false) => {
                     const ctx = canvas.getContext('2d');
 
                     const tsCondition = document.getElementById('icon-copy-transparent-select').value;
-                    console.log({ tsCondition });
 
                     if (tsCondition == 'lightgray-to-transparent') {
                         ctx.drawImage(img, 0, 0);
