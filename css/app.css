@@ -22,17 +22,17 @@
 }
 
 #icon-search {
-    width: 140px;
+    width: 100px;
 }
 
 #icon-search-term {
-    width: 480px;
+    width: 400px;
 }
 
 #icon-search-ignorecase-switch {
-    width: 240px
+    width: 250px
 }
 
-#icon-search-ignorecase-label {
-    font-size: x-small;
+#icon-copy-transparent-select {
+    width: 250px
 }

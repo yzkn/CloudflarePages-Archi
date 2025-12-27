@@ -81,14 +81,14 @@
                     <img src="image/archit_64x64.png" alt="Archit" width="32" height="32">
                     Archit
                 </a>
-                <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center align-items-center">
                     <input class="form-control me-2" type="search" placeholder="検索キーワード" aria-label="Search"
                         id="icon-search-term" autocomplete="on" list="search-list">
                     <datalist id="search-list"></datalist>
-                    <div class="form-check form-switch me-2" id="icon-search-ignorecase-switch">
+                    <div class="form-check form-switch me-2 align-items-center" id="icon-search-ignorecase-switch">
                         <input class="form-check-input" type="checkbox" id="icon-search-ignorecase" title="Ignore case">
-                        <label class="form-check-label align-middle" for="icon-search-ignorecase"
-                            id="icon-search-ignorecase-label">大文字/小文字を区別する</label>
+                        <label class="form-check-label" for="icon-search-ignorecase" id="icon-search-ignorecase-label"
+                            title="ic">大/小文字を区別する</label>
                     </div>
                     <button class="btn btn-primary" type="button" id="icon-search">
                         Search<span class="spinner-border spinner-border-sm spinner-hidden ms-1" role="status"
@@ -106,18 +106,32 @@
 
         <footer class="footer mt-auto py-3 text-muted text-center text-light">
             <div class="container">
-                Archit <small>(ver.1.5)</small>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                Copyright &copy;
-                <script type="text/javascript"> document.write(new Date().getFullYear());</script>
-                YA All rights reserved.
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                ご意見・ご感想は<a href="https://forms.gle/dxmFoszAhgw68Q4F8" target="_blank">こちら</a>へ。
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <button type="button" class="btn btn btn-outline-info btn-sm" data-bs-toggle="modal"
-                    data-bs-target="#sourceModal">
-                    出典
-                </button>
+                <div class="d-flex align-items-center">
+                    <div class="d-flex p-2 flex-fill">
+                        Archit (ver.1.6)
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        Copyright &copy;
+                        <script type="text/javascript"> document.write(new Date().getFullYear());</script>
+                        YA All rights reserved.
+                    </div>
+                    <!-- ご意見・ご感想は<a href="https://forms.gle/dxmFoszAhgw68Q4F8" target="_blank">こちら</a>へ。 -->
+                    <div class="d-flex p-2 flex-fill align-items-center">
+                        <label for="icon-copy-transparent-select" id="icon-copy-transparent-label" title="ic">設定</label>
+                        <select class="form-select form-select-sm mx-2" aria-label="画像コピー時の透明度の扱いを設定します"
+                            id="icon-copy-transparent-select">
+                            <option value="none" selected>画像コピー時に、色を編集しない</option>
+                            <option value="lightgray-to-transparent">白色～明灰色を透明に置き換える</option>
+                            <option value="white-to-transparent">白色を透明に置き換える</option>
+                            <option value="white-background">背景を白く塗りつぶしてから描画する</option>
+                        </select>
+                    </div>
+                    <div class="d-flex p-2 flex-fill">
+                        <button type="button mx-2" class="btn btn btn-outline-info btn-sm" data-bs-toggle="modal"
+                            data-bs-target="#sourceModal">
+                            出典
+                        </button>
+                    </div>
+                </div>
             </div>
         </footer>
     </div>
@@ -129,4 +143,4 @@
     <script src="js/app.js"></script>
 </body>
 
-</html><!-- Copyright (c) 2023 YA All rights reserved. -->
+</html><!-- Copyright (c) 2026 YA All rights reserved. -->
