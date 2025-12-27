@@ -364,19 +364,14 @@ window.addEventListener('DOMContentLoaded', _ => {
     if (ic) {
         if (ic == 't') {
             document.getElementById('icon-search-ignorecase').checked = true;
-            document.getElementById('icon-search-ignorecase-label').innerText = "大文字/小文字を区別しない";
+            document.getElementById('icon-search-ignorecase-label').innerText = "大/小文字を区別しない";
         }
     }
 
     // クエリパラメーターをもとに設定: icon-copy-transparent-select
-    /*
-    <option value="none">色を置き換えない</option>
-    <option value="white-to-transparent">白色を透明にする</option>
-    <option value="white-background">背景を白色にする</option>
-    */
     let ts = retrieveQueryDict()['ts'];
     if (ts) {
-        if (ts == 'none' || ts == 'white-to-transparent' || ts == 'white-background') {
+        if (ts == 'none' || ts == 'white-to-transparent' || ts == 'white-background' || ts == 'lightgray-to-transparent') {
             let optionElement = document.getElementById('icon-copy-transparent-select').querySelector('option[value="' + ts + '"]');
             optionElement.selected = true;
         }
