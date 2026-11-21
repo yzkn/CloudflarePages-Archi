@@ -21,18 +21,35 @@
     display: none;
 }
 
+#image-list {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#image-list > div {
+    width: 64px;
+}
+
 #icon-search {
-    width: 100px;
+    min-width: 100px;
 }
 
 #icon-search-term {
-    width: 400px;
+    flex: 1 1 12rem;
+    width: auto;
+    min-width: 0;
+    max-width: 400px;
 }
 
 #icon-search-ignorecase-switch {
-    width: 250px
+    white-space: nowrap;
 }
 
 #icon-copy-transparent-select {
-    width: 250px
+    width: auto;
+    max-width: 100%;
+}
+
+#icon-copy-transparent-label {
+    white-space: nowrap;
 }
