@@ -18,6 +18,68 @@ let stored = null;
 
 const basename = path => path.split('/').pop().split('.').shift();
 
+// 出典で絞り込むチップ: 選んだ出典のキー（空なら、すべて）
+let selectedSources = new Set();
+const connectorSource = 'Power_Platform_Connector';
+
+// path の先頭の部分から出典のキーを作る（asset/<出典>/...・material-design-icons/...・https://msico.pages.dev/...）
+const sourceKey = path => path.startsWith(msLearnIconBaseUri)
+    ? 'msico'
+    : (path.startsWith('asset/') ? path.split('/')[1] : path.split('/')[0]);
+
+// チップに出す名前。無いキーは、記号を空白に置き換えて出す（新しい出典も自動で並ぶ）
+const sourceLabels = {
+    'Cisco-3015_jpeg': 'Cisco',
+    'Dynamics_365_Icons_scalable': 'Dynamics 365',
+    'Google_Cloud_Basic_Cards': 'Google Cloud',
+    'Microsoft_Fasttrack': 'Microsoft Office App',
+    'OpenSecurityArchitecture': 'Open Security Architecture',
+    'PowerBI-Icons-main': 'Power BI',
+    'Power_Platform_Connector': 'Power Platform コネクタ',
+    'Power_Platform_scalable': 'Power Platform',
+    'Sakura': 'さくら',
+    'Visual_Studio_2022_Image_Library': 'Visual Studio',
+    'Yamaha': 'ヤマハ',
+    'future-architect': 'Future',
+    'material-design-icons': 'Material',
+    'msico': 'Microsoft Learn',
+};
+const sourceLabel = key => sourceLabels[key] || key.replace(/[_-]+/g, ' ');
+
+const renderSourceFilter = (counts, total, term, ignore_case) => {
+    const container = document.getElementById('source-filter');
+    container.innerHTML = '';
+
+    const makeChip = (label, count, active, onClick) => {
+        const chip = document.createElement('button');
+        chip.type = 'button';
+        chip.classList.add('btn', 'btn-sm', 'rounded-pill', 'text-nowrap', active ? 'btn-secondary' : 'btn-outline-secondary');
+        chip.setAttribute('aria-pressed', active ? 'true' : 'false');
+        chip.innerText = label + ' ' + count;
+        chip.addEventListener('click', onClick);
+        container.appendChild(chip);
+    };
+
+    makeChip('すべて', total, selectedSources.size === 0, () => {
+        selectedSources.clear();
+        parseJson(term, ignore_case);
+    });
+    Object.keys(counts)
+        .sort((a, b) => sourceLabel(a).localeCompare(sourceLabel(b), 'ja'))
+        .forEach(key => {
+            makeChip(sourceLabel(key), counts[key], selectedSources.has(key), () => {
+                if (selectedSources.has(key)) {
+                    selectedSources.delete(key);
+                } else {
+                    selectedSources.add(key);
+                }
+                parseJson(term, ignore_case);
+            });
+        });
+
+    container.classList.toggle('d-none', Object.keys(counts).length === 0);
+};
+
 const retrieveQueryDict = () => {
     const urlSearchParams = new URLSearchParams(window.location.search);
     return Object.fromEntries(urlSearchParams.entries());
@@ -213,19 +275,28 @@ const parseJson = (term = '', ignore_case = false) => {
                     .every(t => t === true)
         });
 
-        let conn = retrieveQueryDict()['conn'];
-        if (conn) {
-            if (conn == 't') {
-                console.log('conn');
-            } else {
-                filtered = filtered.filter((element) => {
-                    return (!element.path.includes('asset/Power_Platform_Connector/'));
-                });
+        // 出典ごとの件数（チップに出す）。キーワードで絞ったあと、出典で絞る前の数
+        const counts = {};
+        filtered.forEach(element => {
+            const key = sourceKey(element.path);
+            counts[key] = (counts[key] || 0) + 1;
+        });
+        // 今回の結果に無い出典の選択は外す（チップが消えて外せなくなるため）
+        selectedSources.forEach(key => {
+            if (!counts[key]) {
+                selectedSources.delete(key);
             }
-        } else {
-            filtered = filtered.filter((element) => {
-                return (!element.path.includes('asset/Power_Platform_Connector/'));
-            });
+        });
+
+        // Power Platform のコネクタは、?conn=t か、そのチップを選んだときだけ出す
+        const showConnector = retrieveQueryDict()['conn'] == 't' || selectedSources.has(connectorSource);
+        if (!showConnector) {
+            filtered = filtered.filter(element => sourceKey(element.path) !== connectorSource);
+        }
+        renderSourceFilter(counts, filtered.length, term, ignore_case);
+
+        if (selectedSources.size > 0) {
+            filtered = filtered.filter(element => selectedSources.has(sourceKey(element.path)));
         }
         if (filtered.length == 0) {
             hideSpinner();

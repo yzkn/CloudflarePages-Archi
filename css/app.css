@@ -9,6 +9,14 @@
     display: block;
 }
 
+/* 出典のチップ: スマートフォン幅では折り返さず、横にスクロールする */
+@media (max-width: 575.98px) {
+    #source-filter {
+        flex-wrap: nowrap !important;
+        overflow-x: auto;
+    }
+}
+
 .img-thumbnail {
     height: 64px;
     width: 64px;
