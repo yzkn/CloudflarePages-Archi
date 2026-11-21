@@ -216,6 +216,12 @@ const parseJson = (term = '', ignore_case = false) => {
             });
 
             let elementsProcessed = 0;
+            const countProcessed = () => {
+                elementsProcessed++;
+                if (elementsProcessed === sorted.length) {
+                    hideSpinner();
+                }
+            };
             sorted.forEach(element => {
                 let box = document.createElement('div');
                 box.classList.add('position-relative');
@@ -321,11 +327,29 @@ const parseJson = (term = '', ignore_case = false) => {
                     box.appendChild(nameBox);
                     imageList.appendChild(box);
 
-                    elementsProcessed++;
-                    if (elementsProcessed === sorted.length) {
-                        hideSpinner();
-                    }
+                    countProcessed();
                 }
+
+                img.onerror = () => {
+                    // 読み込めない画像も完了に数える（数えないと検索ボタンが戻らない）
+                    let failedBox = document.createElement('div');
+                    failedBox.classList.add('img-thumbnail');
+                    failedBox.classList.add('d-flex');
+                    failedBox.classList.add('align-items-center');
+                    failedBox.classList.add('justify-content-center');
+                    failedBox.classList.add('text-center');
+                    failedBox.classList.add('text-secondary');
+                    failedBox.style.width = '64px';
+                    failedBox.style.height = '64px';
+                    failedBox.style.fontSize = '10px';
+                    failedBox.innerText = '読み込めません';
+                    failedBox.title = element.path + "\n---\n" + element.description + "\n（画像を読み込めませんでした）";
+
+                    box.appendChild(failedBox);
+                    imageList.appendChild(box);
+
+                    countProcessed();
+                };
 
                 img.alt = element.path;
                 img.className = 'img-thumbnail';
