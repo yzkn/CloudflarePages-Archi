@@ -286,8 +286,10 @@ const parseJson = (term = '', ignore_case = false) => {
 
                     let captionBox = document.createElement('div');
                     captionBox.classList.add('position-absolute');
-                    captionBox.classList.add('bottom-0');
                     captionBox.classList.add('w-100');
+                    // 名前を枠の下に出すので、寸法は画像の下端に合わせる
+                    captionBox.style.top = '64px';
+                    captionBox.style.transform = 'translateY(-100%)';
 
                     let captionLabel = document.createElement('p');
                     captionLabel.classList.add('m-0');
@@ -299,20 +301,18 @@ const parseJson = (term = '', ignore_case = false) => {
                     captionLabel.style.fontSize = '10px';
 
                     let nameBox = document.createElement('div');
-                    nameBox.classList.add('position-absolute');
-                    nameBox.classList.add('top-0');
                     nameBox.classList.add('w-100');
 
+                    // 名前は枠の下に 1 行で出す（長いものは省略記号。全体はツールチップ）
                     let nameLabel = document.createElement('p');
                     nameLabel.classList.add('m-0');
-                    nameLabel.classList.add('p-0');
-                    nameLabel.classList.add('text-start');
-                    nameLabel.classList.add('text-nowrap');
-                    nameLabel.classList.add('text-light');
+                    nameLabel.classList.add('px-1');
+                    nameLabel.classList.add('text-center');
+                    nameLabel.classList.add('text-truncate');
+                    nameLabel.classList.add('text-body');
                     nameLabel.innerText = basename(element.path);
-                    nameLabel.style.transform = "scale(0.5)";
-                    nameLabel.style.transformOrigin = "0 0";
-                    nameLabel.style.fontSize = '10px';
+                    nameLabel.title = basename(element.path);
+                    nameLabel.style.fontSize = '11px';
 
                     box.appendChild(img);
                     captionBox.appendChild(captionLabel);
