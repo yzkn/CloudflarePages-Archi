@@ -162,6 +162,31 @@ const initAutocomplete = () => {
     }
 };
 
+// 検索の結果は、並び順どおりに pageSize 件ずつ置く（当たった全件の画像を一度に要求しない）
+const pageSize = 200;
+// 検索の世代。新しい検索を始めたら、前の検索の画像の読み込みの知らせは数えない
+let searchGeneration = 0;
+
+// 結果の下の「さらに表示」のボタン。残りが無ければ消す
+const updateMoreButton = (remaining, onClick) => {
+    let more = document.getElementById('image-more');
+    if (remaining <= 0) {
+        if (more) {
+            more.remove();
+        }
+        return;
+    }
+    if (!more) {
+        more = document.createElement('button');
+        more.id = 'image-more';
+        more.type = 'button';
+        more.classList.add('btn', 'btn-outline-secondary', 'd-block', 'mx-auto', 'my-3');
+        document.getElementById('image-list').after(more);
+    }
+    more.innerText = 'さらに表示（残り ' + remaining + ' 件）';
+    more.onclick = onClick;
+};
+
 const parseJson = (term = '', ignore_case = false) => {
     if (stored == null) {
         setTimeout(() => {
@@ -169,9 +194,11 @@ const parseJson = (term = '', ignore_case = false) => {
         }, 500);
     } else {
         showSpinner();
+        const generation = ++searchGeneration;
 
         let imageList = document.getElementById('image-list');
         imageList.innerHTML = '';
+        updateMoreButton(0);
 
         let filtered = stored.tree.filter((element) => {
             return ignore_case
@@ -215,18 +242,26 @@ const parseJson = (term = '', ignore_case = false) => {
                 }
             });
 
+            // 置いた件数と、そのうち画像の読み込みが終わった（失敗も含む）件数
+            let rendered = 0;
             let elementsProcessed = 0;
             const countProcessed = () => {
+                if (generation !== searchGeneration) {
+                    return;
+                }
                 elementsProcessed++;
-                if (elementsProcessed === sorted.length) {
+                if (elementsProcessed === rendered) {
                     hideSpinner();
                 }
             };
-            sorted.forEach(element => {
+            // 1 件分の枠を作る。枠は先に並び順どおりに置き、画像は読み込めたら枠に入れる
+            const renderBox = element => {
                 let box = document.createElement('div');
                 box.classList.add('position-relative');
                 box.height = 64;
                 box.width = 64;
+                box.style.minWidth = '64px';
+                box.style.minHeight = '64px';
 
                 let img = document.createElement('img');
                 img.onclick = (event) => {
@@ -325,7 +360,6 @@ const parseJson = (term = '', ignore_case = false) => {
                     box.appendChild(captionBox);
                     nameBox.appendChild(nameLabel);
                     box.appendChild(nameBox);
-                    imageList.appendChild(box);
 
                     countProcessed();
                 }
@@ -346,7 +380,6 @@ const parseJson = (term = '', ignore_case = false) => {
                     failedBox.title = element.path + "\n---\n" + element.description + "\n（画像を読み込めませんでした）";
 
                     box.appendChild(failedBox);
-                    imageList.appendChild(box);
 
                     countProcessed();
                 };
@@ -356,7 +389,22 @@ const parseJson = (term = '', ignore_case = false) => {
                 img.crossOrigin = 'anonymous';
                 img.title = element.path + "\n---\n" + element.description + "\n（クリックしてクリップボードにコピー）";
                 img.src = element.path.startsWith(msLearnIconBaseUri) ? element.path : (element.path.startsWith(materialIconsBaseUri2) ? element.path.replace(materialIconsBaseUri2, materialIconsBaseUri) : (baseUri + element.path));
-            });
+                return box;
+            };
+            const renderPage = () => {
+                const fragment = document.createDocumentFragment();
+                const page = sorted.slice(rendered, rendered + pageSize);
+                rendered += page.length;
+                page.forEach(element => {
+                    fragment.appendChild(renderBox(element));
+                });
+                imageList.appendChild(fragment);
+                updateMoreButton(sorted.length - rendered, () => {
+                    showSpinner();
+                    renderPage();
+                });
+            };
+            renderPage();
         }
     }
 };
