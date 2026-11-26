@@ -61,3 +61,30 @@
 #icon-copy-transparent-label {
     white-space: nowrap;
 }
+
+/* アイコンの右上の「ダウンロード」「URL をコピー」のボタン */
+.icon-actions {
+    gap: 1px;
+    opacity: 0;
+    transition: opacity .15s;
+}
+
+#image-list > div:hover .icon-actions,
+#image-list > div:focus-within .icon-actions {
+    opacity: 1;
+}
+
+/* タッチの端末（マウスを載せられない）では常に出す */
+@media (hover: none) {
+    .icon-actions {
+        opacity: .85;
+    }
+}
+
+.icon-action {
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
+    line-height: 22px;
+    border: 1px solid rgba(0, 0, 0, .2);
+}

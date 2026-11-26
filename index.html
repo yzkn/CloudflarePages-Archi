@@ -45,7 +45,11 @@
     <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
         <div id="toast-copied" class="toast hide text-white bg-success" role="alert" aria-live="assertive"
             aria-atomic="true">
-            <div class="toast-body">クリップボードにコピーしました。</div>
+            <div class="toast-body" id="toast-copied-body">クリップボードにコピーしました。</div>
+        </div>
+        <div id="toast-failed" class="toast hide text-dark bg-warning" role="alert" aria-live="assertive"
+            aria-atomic="true">
+            <div class="toast-body" id="toast-failed-body">コピーできませんでした。</div>
         </div>
         <div id="toast-input-keyword" class="toast hide text-white bg-info" role="alert" aria-live="assertive"
             aria-atomic="true">
