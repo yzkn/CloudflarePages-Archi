@@ -130,6 +130,22 @@ const retrieveQueryDict = () => {
     return Object.fromEntries(urlSearchParams.entries());
 };
 
+// 検索の条件を URL に書き戻す（?term=…&ic=t&ts=…）。履歴は増やさない。既定の値は書かない。ほかの引数（conn など）は残す
+const updateQueryString = () => {
+    const params = new URLSearchParams(window.location.search);
+    const term = document.getElementById('icon-search-term').value.trim();
+    const ignoreCase = document.getElementById('icon-search-ignorecase').checked;
+    const ts = document.getElementById('icon-copy-transparent-select').value;
+    term !== '' ? params.set('term', term) : params.delete('term');
+    ignoreCase ? params.set('ic', 't') : params.delete('ic');
+    ts !== 'none' ? params.set('ts', ts) : params.delete('ts');
+    const query = params.toString();
+    const next = window.location.pathname + (query ? '?' + query : '') + window.location.hash;
+    if (next !== window.location.pathname + window.location.search + window.location.hash) {
+        history.replaceState(history.state, '', next);
+    }
+};
+
 const showSpinner = () => {
     document.getElementById('icon-search-spinner').classList.remove('spinner-hidden');
     document.getElementById('icon-search').disabled = true;
@@ -371,6 +387,7 @@ const parseJson = (term = '', ignore_case = false) => {
     } else {
         showSpinner();
         const generation = ++searchGeneration;
+        updateQueryString();
 
         let imageList = document.getElementById('image-list');
         imageList.innerHTML = '';
@@ -630,6 +647,7 @@ const scheduleSearch = () => {
             renderSourceFilter({}, 0, '', false);
             showResultCount(null);
             hideSpinner();
+            updateQueryString();
             return;
         }
         loadJson(term, document.getElementById('icon-search-ignorecase').checked);
@@ -716,8 +734,11 @@ window.addEventListener('DOMContentLoaded', _ => {
     });
     // 大文字・小文字の切り替えも、入力があれば検索しなおす
     document.getElementById('icon-search-ignorecase').addEventListener('change', _ => {
+        updateQueryString();
         if (document.getElementById('icon-search-term').value.trim() !== '') {
             scheduleSearch();
         }
     });
+    // コピーの設定（透明の扱い）も URL に残す
+    document.getElementById('icon-copy-transparent-select').addEventListener('change', updateQueryString);
 });
