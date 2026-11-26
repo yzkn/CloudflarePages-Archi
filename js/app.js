@@ -46,9 +46,11 @@ const downloadImage = async (url, path) => {
         a.click();
         a.remove();
         setTimeout(() => URL.revokeObjectURL(objectUrl), 10000);
+        return true;
     } catch (error) {
         console.error(error);
         showFailed('ダウンロードできませんでした（' + error.message + '）。');
+        return false;
     }
 };
 
@@ -57,10 +59,96 @@ const copyImageUrl = async url => {
     try {
         await navigator.clipboard.writeText(url);
         showCopied('画像の URL をコピーしました。');
+        return true;
     } catch (error) {
         console.error(error);
         showFailed('URL をコピーできませんでした（' + error.message + '）。');
+        return false;
     }
+};
+
+// お気に入り・最近コピーしたアイコン（この端末の localStorage だけに持つ。読めない・書けないときは、この画面の間だけ覚える）
+const favoritesKey = 'archit.favorites';
+const recentKey = 'archit.recent';
+const recentLimit = 24;
+const favoritesLimit = 200;
+
+const readSaved = key => {
+    try {
+        const value = JSON.parse(localStorage.getItem(key) || '[]');
+        return Array.isArray(value) ? value.filter(item => item && typeof item.path === 'string') : [];
+    } catch (error) {
+        return [];
+    }
+};
+const writeSaved = (key, items) => {
+    try {
+        localStorage.setItem(key, JSON.stringify(items));
+    } catch (error) {
+        console.warn(error);
+    }
+};
+let favorites = readSaved(favoritesKey);
+let recent = readSaved(recentKey);
+
+// 保存するのは path と description だけ（画像は持たない）
+const savedItem = element => ({ path: element.path, description: element.description || '' });
+const isFavorite = path => favorites.some(item => item.path === path);
+
+// コピー・ダウンロード・URL のコピーができたら、最近の先頭に置く（重複は除く）
+const addRecent = element => {
+    recent = [savedItem(element)].concat(recent.filter(item => item.path !== element.path)).slice(0, recentLimit);
+    writeSaved(recentKey, recent);
+    renderSaved();
+};
+
+const clearRecent = () => {
+    recent = [];
+    writeSaved(recentKey, recent);
+    renderSaved();
+};
+
+const updateFavButton = button => {
+    const on = isFavorite(button.dataset.path);
+    const title = on ? 'お気に入りから外す' : 'お気に入りに追加';
+    button.innerText = on ? '★' : '☆';
+    button.title = title;
+    button.setAttribute('aria-pressed', on ? 'true' : 'false');
+    button.setAttribute('aria-label', title + '（' + basename(button.dataset.path) + '）');
+};
+
+const toggleFavorite = element => {
+    if (isFavorite(element.path)) {
+        favorites = favorites.filter(item => item.path !== element.path);
+        showCopied('お気に入りから外しました。');
+    } else {
+        favorites = [savedItem(element)].concat(favorites).slice(0, favoritesLimit);
+        showCopied('お気に入りに追加しました。');
+    }
+    writeSaved(favoritesKey, favorites);
+    renderSaved();
+    // 検索の結果の側の ☆ / ★ も合わせる
+    document.querySelectorAll('.icon-fav').forEach(updateFavButton);
+};
+
+// 検索欄の下の帯（お気に入り・最近コピーした）。どちらも空なら出さない
+const renderSaved = () => {
+    const container = document.getElementById('saved-icons');
+    if (!container) {
+        return;
+    }
+    const fill = (listId, countId, sectionId, items) => {
+        const list = document.getElementById(listId);
+        list.innerHTML = '';
+        const fragment = document.createDocumentFragment();
+        items.forEach(item => fragment.appendChild(renderBox(item)));
+        list.appendChild(fragment);
+        document.getElementById(countId).innerText = items.length;
+        document.getElementById(sectionId).classList.toggle('d-none', items.length === 0);
+    };
+    fill('favorite-list', 'favorite-count', 'saved-favorites', favorites);
+    fill('recent-list', 'recent-count', 'saved-recent', recent);
+    container.classList.toggle('d-none', favorites.length === 0 && recent.length === 0);
 };
 
 // 出典で絞り込むチップ: 選んだ出典のキー（空なら、すべて）
@@ -387,6 +475,199 @@ const updateMoreButton = (remaining, onClick) => {
     more.onclick = onClick;
 };
 
+// 1 件分の枠を作る（検索の結果と、お気に入り・最近コピーした帯で使う）。枠は先に並び順どおりに置き、画像は読み込めたら枠に入れる
+const renderBox = (element, onDone = () => {}) => {
+    let box = document.createElement('div');
+    box.classList.add('position-relative');
+    box.height = 64;
+    box.width = 64;
+    box.style.minWidth = '64px';
+    box.style.minHeight = '64px';
+
+    let img = document.createElement('img');
+    img.onclick = (event) => {
+        const img = event.target;
+        if (!img.naturalWidth || !img.naturalHeight) {
+            // 寸法を持たない SVG などは PNG にできない（黙って失敗させない）
+            showFailed('この画像は PNG としてコピーできません。右上の ⬇ でダウンロードしてください。');
+            return;
+        }
+        const canvas = document.createElement('canvas');
+        canvas.width = img.naturalWidth;
+        canvas.height = img.naturalHeight;
+        const ctx = canvas.getContext('2d');
+
+        const tsCondition = document.getElementById('icon-copy-transparent-select').value;
+
+        if (tsCondition == 'lightgray-to-transparent') {
+            ctx.drawImage(img, 0, 0);
+            const imagedata = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            const data = imagedata.data;
+            for (let i = 0; i < canvas.width * canvas.height * 4; i += 4) {
+                if (data[i] >= 240 && data[i + 1] >= 240 && data[i + 2] >= 240 && data[i] === data[i + 1] && data[i + 1] === data[i + 2]) {
+                    // data[i] = 0;
+                    // data[i + 1] = 0;
+                    // data[i + 2] = 0;
+                    data[i + 3] = 0; // アルファ値を0にして透明にする
+                }
+            }
+            ctx.putImageData(imagedata, 0, 0);
+        } else if (tsCondition == 'white-to-transparent') {
+            ctx.drawImage(img, 0, 0);
+            const imagedata = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            const data = imagedata.data;
+            for (let i = 0; i < canvas.width * canvas.height * 4; i += 4) {
+                if (data[i] === 255 && data[i + 1] === 255 && data[i + 2] === 255) {
+                    data[i + 3] = 0; // アルファ値を0にして透明にする
+                }
+            }
+            ctx.putImageData(imagedata, 0, 0);
+        } else if (tsCondition == 'white-background') {
+            ctx.beginPath();
+            ctx.fillStyle = 'white';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.drawImage(img, 0, 0);
+        } else if (tsCondition == 'none') {
+            ctx.drawImage(img, 0, 0);
+        }
+
+        // Safari はクリックの中で write を呼ぶ必要があるので、Blob の Promise を渡す
+        const blobPromise = new Promise((resolve, reject) => {
+            try {
+                canvas.toBlob(blob => blob ? resolve(blob) : reject(new Error('PNG にできませんでした')), 'image/png');
+            } catch (error) {
+                // 画像の読み込み元が CORS を許していないと、canvas から取り出せない
+                reject(error);
+            }
+        });
+        (async () => {
+            try {
+                if (typeof ClipboardItem === 'undefined') {
+                    throw new Error('ClipboardItem is not defined');
+                }
+                const item = new ClipboardItem({
+                    'image/png': blobPromise
+                });
+                await navigator.clipboard.write([item]);
+                showCopied('画像（PNG）をクリップボードにコピーしました。');
+                addRecent(element);
+            } catch (error) {
+                console.error(error);
+                if (error.message == 'ClipboardItem is not defined') {
+                    toastDict['toast-clipboard-item'].show();
+                } else {
+                    showFailed('画像をコピーできませんでした（' + error.message + '）。');
+                }
+            }
+        })();
+    };
+
+    img.onload = () => {
+        const width = img.naturalWidth;
+        const height = img.naturalHeight;
+        const imgSize = String(width) + 'x' + String(height);
+
+        let captionBox = document.createElement('div');
+        captionBox.classList.add('position-absolute');
+        captionBox.classList.add('w-100');
+        // 名前を枠の下に出すので、寸法は画像の下端に合わせる
+        captionBox.style.top = '64px';
+        captionBox.style.transform = 'translateY(-100%)';
+
+        let captionLabel = document.createElement('p');
+        captionLabel.classList.add('m-0');
+        captionLabel.classList.add('px-1');
+        captionLabel.classList.add('text-end');
+        captionLabel.classList.add('text-light');
+        captionLabel.innerText = imgSize;
+        captionLabel.style.backgroundColor = 'rgba(0, 0, 0, 0.3)';
+        captionLabel.style.fontSize = '10px';
+
+        let nameBox = document.createElement('div');
+        nameBox.classList.add('w-100');
+
+        // 名前は枠の下に 1 行で出す（長いものは省略記号。全体はツールチップ）
+        let nameLabel = document.createElement('p');
+        nameLabel.classList.add('m-0');
+        nameLabel.classList.add('px-1');
+        nameLabel.classList.add('text-center');
+        nameLabel.classList.add('text-truncate');
+        nameLabel.classList.add('text-body');
+        nameLabel.innerText = basename(element.path);
+        nameLabel.title = basename(element.path);
+        nameLabel.style.fontSize = '11px';
+
+        // 元の形式のまま保存・URL をコピーするボタン（PC ではマウスを載せたとき、タッチの端末では常に出す）
+        let actions = document.createElement('div');
+        actions.classList.add('icon-actions', 'position-absolute', 'top-0', 'end-0', 'd-flex');
+        const makeAction = (label, title, onClick) => {
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.classList.add('icon-action', 'btn', 'btn-light', 'p-0');
+            button.innerText = label;
+            button.title = title;
+            button.setAttribute('aria-label', title + '（' + basename(element.path) + '）');
+            button.addEventListener('click', e => {
+                e.stopPropagation();
+                onClick();
+            });
+            actions.appendChild(button);
+            return button;
+        };
+        makeAction('⬇', '元の形式・大きさでダウンロード', async () => {
+            if (await downloadImage(img.src, element.path)) {
+                addRecent(element);
+            }
+        });
+        makeAction('🔗', '画像の URL をコピー', async () => {
+            if (await copyImageUrl(img.src)) {
+                addRecent(element);
+            }
+        });
+        // お気に入りの切り替え（☆ = 未登録、★ = 登録済み）
+        const favButton = makeAction('☆', 'お気に入りに追加', () => toggleFavorite(element));
+        favButton.classList.add('icon-fav');
+        favButton.dataset.path = element.path;
+        updateFavButton(favButton);
+
+        box.appendChild(img);
+        box.appendChild(actions);
+        captionBox.appendChild(captionLabel);
+        box.appendChild(captionBox);
+        nameBox.appendChild(nameLabel);
+        box.appendChild(nameBox);
+
+        onDone();
+    }
+
+    img.onerror = () => {
+        // 読み込めない画像も完了に数える（数えないと検索ボタンが戻らない）
+        let failedBox = document.createElement('div');
+        failedBox.classList.add('img-thumbnail');
+        failedBox.classList.add('d-flex');
+        failedBox.classList.add('align-items-center');
+        failedBox.classList.add('justify-content-center');
+        failedBox.classList.add('text-center');
+        failedBox.classList.add('text-secondary');
+        failedBox.style.width = '64px';
+        failedBox.style.height = '64px';
+        failedBox.style.fontSize = '10px';
+        failedBox.innerText = '読み込めません';
+        failedBox.title = element.path + "\n---\n" + element.description + "\n（画像を読み込めませんでした）";
+
+        box.appendChild(failedBox);
+
+        onDone();
+    };
+
+    img.alt = element.path;
+    img.className = 'img-thumbnail';
+    img.crossOrigin = 'anonymous';
+    img.title = element.path + "\n---\n" + element.description + "\n（クリックで PNG としてクリップボードにコピー。右上の ⬇ で元の形式のまま保存、🔗 で URL をコピー）";
+    img.src = element.path.startsWith(msLearnIconBaseUri) ? element.path : (element.path.startsWith(materialIconsBaseUri2) ? element.path.replace(materialIconsBaseUri2, materialIconsBaseUri) : (baseUri + element.path));
+    return box;
+};
+
 const parseJson = (term = '', ignore_case = false) => {
     if (searchIndex == null) {
         loadJson(term, ignore_case);
@@ -444,189 +725,12 @@ const parseJson = (term = '', ignore_case = false) => {
                     hideSpinner();
                 }
             };
-            // 1 件分の枠を作る。枠は先に並び順どおりに置き、画像は読み込めたら枠に入れる
-            const renderBox = element => {
-                let box = document.createElement('div');
-                box.classList.add('position-relative');
-                box.height = 64;
-                box.width = 64;
-                box.style.minWidth = '64px';
-                box.style.minHeight = '64px';
-
-                let img = document.createElement('img');
-                img.onclick = (event) => {
-                    const img = event.target;
-                    if (!img.naturalWidth || !img.naturalHeight) {
-                        // 寸法を持たない SVG などは PNG にできない（黙って失敗させない）
-                        showFailed('この画像は PNG としてコピーできません。右上の ⬇ でダウンロードしてください。');
-                        return;
-                    }
-                    const canvas = document.createElement('canvas');
-                    canvas.width = img.naturalWidth;
-                    canvas.height = img.naturalHeight;
-                    const ctx = canvas.getContext('2d');
-
-                    const tsCondition = document.getElementById('icon-copy-transparent-select').value;
-
-                    if (tsCondition == 'lightgray-to-transparent') {
-                        ctx.drawImage(img, 0, 0);
-                        const imagedata = ctx.getImageData(0, 0, canvas.width, canvas.height);
-                        const data = imagedata.data;
-                        for (let i = 0; i < canvas.width * canvas.height * 4; i += 4) {
-                            if (data[i] >= 240 && data[i + 1] >= 240 && data[i + 2] >= 240 && data[i] === data[i + 1] && data[i + 1] === data[i + 2]) {
-                                // data[i] = 0;
-                                // data[i + 1] = 0;
-                                // data[i + 2] = 0;
-                                data[i + 3] = 0; // アルファ値を0にして透明にする
-                            }
-                        }
-                        ctx.putImageData(imagedata, 0, 0);
-                    } else if (tsCondition == 'white-to-transparent') {
-                        ctx.drawImage(img, 0, 0);
-                        const imagedata = ctx.getImageData(0, 0, canvas.width, canvas.height);
-                        const data = imagedata.data;
-                        for (let i = 0; i < canvas.width * canvas.height * 4; i += 4) {
-                            if (data[i] === 255 && data[i + 1] === 255 && data[i + 2] === 255) {
-                                data[i + 3] = 0; // アルファ値を0にして透明にする
-                            }
-                        }
-                        ctx.putImageData(imagedata, 0, 0);
-                    } else if (tsCondition == 'white-background') {
-                        ctx.beginPath();
-                        ctx.fillStyle = 'white';
-                        ctx.fillRect(0, 0, canvas.width, canvas.height);
-                        ctx.drawImage(img, 0, 0);
-                    } else if (tsCondition == 'none') {
-                        ctx.drawImage(img, 0, 0);
-                    }
-
-                    // Safari はクリックの中で write を呼ぶ必要があるので、Blob の Promise を渡す
-                    const blobPromise = new Promise((resolve, reject) => {
-                        try {
-                            canvas.toBlob(blob => blob ? resolve(blob) : reject(new Error('PNG にできませんでした')), 'image/png');
-                        } catch (error) {
-                            // 画像の読み込み元が CORS を許していないと、canvas から取り出せない
-                            reject(error);
-                        }
-                    });
-                    (async () => {
-                        try {
-                            if (typeof ClipboardItem === 'undefined') {
-                                throw new Error('ClipboardItem is not defined');
-                            }
-                            const item = new ClipboardItem({
-                                'image/png': blobPromise
-                            });
-                            await navigator.clipboard.write([item]);
-                            showCopied('画像（PNG）をクリップボードにコピーしました。');
-                        } catch (error) {
-                            console.error(error);
-                            if (error.message == 'ClipboardItem is not defined') {
-                                toastDict['toast-clipboard-item'].show();
-                            } else {
-                                showFailed('画像をコピーできませんでした（' + error.message + '）。');
-                            }
-                        }
-                    })();
-                };
-
-                img.onload = () => {
-                    const width = img.naturalWidth;
-                    const height = img.naturalHeight;
-                    const imgSize = String(width) + 'x' + String(height);
-
-                    let captionBox = document.createElement('div');
-                    captionBox.classList.add('position-absolute');
-                    captionBox.classList.add('w-100');
-                    // 名前を枠の下に出すので、寸法は画像の下端に合わせる
-                    captionBox.style.top = '64px';
-                    captionBox.style.transform = 'translateY(-100%)';
-
-                    let captionLabel = document.createElement('p');
-                    captionLabel.classList.add('m-0');
-                    captionLabel.classList.add('px-1');
-                    captionLabel.classList.add('text-end');
-                    captionLabel.classList.add('text-light');
-                    captionLabel.innerText = imgSize;
-                    captionLabel.style.backgroundColor = 'rgba(0, 0, 0, 0.3)';
-                    captionLabel.style.fontSize = '10px';
-
-                    let nameBox = document.createElement('div');
-                    nameBox.classList.add('w-100');
-
-                    // 名前は枠の下に 1 行で出す（長いものは省略記号。全体はツールチップ）
-                    let nameLabel = document.createElement('p');
-                    nameLabel.classList.add('m-0');
-                    nameLabel.classList.add('px-1');
-                    nameLabel.classList.add('text-center');
-                    nameLabel.classList.add('text-truncate');
-                    nameLabel.classList.add('text-body');
-                    nameLabel.innerText = basename(element.path);
-                    nameLabel.title = basename(element.path);
-                    nameLabel.style.fontSize = '11px';
-
-                    // 元の形式のまま保存・URL をコピーするボタン（PC ではマウスを載せたとき、タッチの端末では常に出す）
-                    let actions = document.createElement('div');
-                    actions.classList.add('icon-actions', 'position-absolute', 'top-0', 'end-0', 'd-flex');
-                    const makeAction = (label, title, onClick) => {
-                        const button = document.createElement('button');
-                        button.type = 'button';
-                        button.classList.add('icon-action', 'btn', 'btn-light', 'p-0');
-                        button.innerText = label;
-                        button.title = title;
-                        button.setAttribute('aria-label', title + '（' + basename(element.path) + '）');
-                        button.addEventListener('click', e => {
-                            e.stopPropagation();
-                            onClick();
-                        });
-                        actions.appendChild(button);
-                    };
-                    makeAction('⬇', '元の形式・大きさでダウンロード', () => downloadImage(img.src, element.path));
-                    makeAction('🔗', '画像の URL をコピー', () => copyImageUrl(img.src));
-
-                    box.appendChild(img);
-                    box.appendChild(actions);
-                    captionBox.appendChild(captionLabel);
-                    box.appendChild(captionBox);
-                    nameBox.appendChild(nameLabel);
-                    box.appendChild(nameBox);
-
-                    countProcessed();
-                }
-
-                img.onerror = () => {
-                    // 読み込めない画像も完了に数える（数えないと検索ボタンが戻らない）
-                    let failedBox = document.createElement('div');
-                    failedBox.classList.add('img-thumbnail');
-                    failedBox.classList.add('d-flex');
-                    failedBox.classList.add('align-items-center');
-                    failedBox.classList.add('justify-content-center');
-                    failedBox.classList.add('text-center');
-                    failedBox.classList.add('text-secondary');
-                    failedBox.style.width = '64px';
-                    failedBox.style.height = '64px';
-                    failedBox.style.fontSize = '10px';
-                    failedBox.innerText = '読み込めません';
-                    failedBox.title = element.path + "\n---\n" + element.description + "\n（画像を読み込めませんでした）";
-
-                    box.appendChild(failedBox);
-
-                    countProcessed();
-                };
-
-                img.alt = element.path;
-                img.className = 'img-thumbnail';
-                img.crossOrigin = 'anonymous';
-                img.title = element.path + "\n---\n" + element.description + "\n（クリックで PNG としてクリップボードにコピー。右上の ⬇ で元の形式のまま保存、🔗 で URL をコピー）";
-                img.src = element.path.startsWith(msLearnIconBaseUri) ? element.path : (element.path.startsWith(materialIconsBaseUri2) ? element.path.replace(materialIconsBaseUri2, materialIconsBaseUri) : (baseUri + element.path));
-                return box;
-            };
             const renderPage = () => {
                 const fragment = document.createDocumentFragment();
                 const page = sorted.slice(rendered, rendered + pageSize);
                 rendered += page.length;
                 page.forEach(element => {
-                    fragment.appendChild(renderBox(element));
+                    fragment.appendChild(renderBox(element, countProcessed));
                 });
                 imageList.appendChild(fragment);
                 updateMoreButton(sorted.length - rendered, () => {
@@ -662,6 +766,22 @@ const scheduleSearch = () => {
 
 window.addEventListener('DOMContentLoaded', _ => {
     loadDataSource();
+
+    // お気に入り・最近コピーした（検索の前から出す）
+    renderSaved();
+    document.getElementById('recent-clear').addEventListener('click', e => {
+        e.preventDefault(); // summary の中なので、折りたたみを切り替えない
+        clearRecent();
+    });
+    // ほかのタブで変えたときも合わせる
+    window.addEventListener('storage', e => {
+        if (e.key === favoritesKey || e.key === recentKey) {
+            favorites = readSaved(favoritesKey);
+            recent = readSaved(recentKey);
+            renderSaved();
+            document.querySelectorAll('.icon-fav').forEach(updateFavButton);
+        }
+    });
 
     document.getElementById('icon-search-ignorecase').addEventListener('change', updateIgnoreCaseLabel);
 
