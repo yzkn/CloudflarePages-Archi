@@ -17,6 +17,51 @@ let toastDict;
 let stored = null;
 
 const basename = path => path.split('/').pop().split('.').shift();
+// 保存のときのファイル名（拡張子つき。URL の末尾の部分）
+const filename = path => decodeURIComponent(path.split('/').pop().split('?').shift());
+
+// 知らせ: 成功（緑）と失敗（黄）。文言は場面ごとに入れ替える
+const showCopied = message => {
+    document.getElementById('toast-copied-body').innerText = message;
+    toastDict['toast-copied'].show();
+};
+const showFailed = message => {
+    document.getElementById('toast-failed-body').innerText = message;
+    toastDict['toast-failed'].show();
+};
+
+// 元の形式・大きさのまま保存する（PNG に変えない。SVG は SVG のまま）
+const downloadImage = async (url, path) => {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error('HTTP ' + response.status);
+        }
+        const blob = await response.blob();
+        const objectUrl = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = objectUrl;
+        a.download = filename(path);
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        setTimeout(() => URL.revokeObjectURL(objectUrl), 10000);
+    } catch (error) {
+        console.error(error);
+        showFailed('ダウンロードできませんでした（' + error.message + '）。');
+    }
+};
+
+// 画像の URL をクリップボードにコピーする
+const copyImageUrl = async url => {
+    try {
+        await navigator.clipboard.writeText(url);
+        showCopied('画像の URL をコピーしました。');
+    } catch (error) {
+        console.error(error);
+        showFailed('URL をコピーできませんでした（' + error.message + '）。');
+    }
+};
 
 // 出典で絞り込むチップ: 選んだ出典のキー（空なら、すべて）
 let selectedSources = new Set();
@@ -388,6 +433,11 @@ const parseJson = (term = '', ignore_case = false) => {
                 let img = document.createElement('img');
                 img.onclick = (event) => {
                     const img = event.target;
+                    if (!img.naturalWidth || !img.naturalHeight) {
+                        // 寸法を持たない SVG などは PNG にできない（黙って失敗させない）
+                        showFailed('この画像は PNG としてコピーできません。右上の ⬇ でダウンロードしてください。');
+                        return;
+                    }
                     const canvas = document.createElement('canvas');
                     canvas.width = img.naturalWidth;
                     canvas.height = img.naturalHeight;
@@ -427,19 +477,34 @@ const parseJson = (term = '', ignore_case = false) => {
                         ctx.drawImage(img, 0, 0);
                     }
 
-                    canvas.toBlob(async (blob) => {
+                    // Safari はクリックの中で write を呼ぶ必要があるので、Blob の Promise を渡す
+                    const blobPromise = new Promise((resolve, reject) => {
                         try {
-                            const item = new ClipboardItem({
-                                'image/png': blob
-                            });
-                            await navigator.clipboard.write([item]);
-                            toastDict['toast-copied'].show();
+                            canvas.toBlob(blob => blob ? resolve(blob) : reject(new Error('PNG にできませんでした')), 'image/png');
                         } catch (error) {
-                            if (error.message == 'ClipboardItem is not defined') {
-                                toastDict['toast-clipboard-item'].show();
-                            }
+                            // 画像の読み込み元が CORS を許していないと、canvas から取り出せない
+                            reject(error);
                         }
                     });
+                    (async () => {
+                        try {
+                            if (typeof ClipboardItem === 'undefined') {
+                                throw new Error('ClipboardItem is not defined');
+                            }
+                            const item = new ClipboardItem({
+                                'image/png': blobPromise
+                            });
+                            await navigator.clipboard.write([item]);
+                            showCopied('画像（PNG）をクリップボードにコピーしました。');
+                        } catch (error) {
+                            console.error(error);
+                            if (error.message == 'ClipboardItem is not defined') {
+                                toastDict['toast-clipboard-item'].show();
+                            } else {
+                                showFailed('画像をコピーできませんでした（' + error.message + '）。');
+                            }
+                        }
+                    })();
                 };
 
                 img.onload = () => {
@@ -477,7 +542,27 @@ const parseJson = (term = '', ignore_case = false) => {
                     nameLabel.title = basename(element.path);
                     nameLabel.style.fontSize = '11px';
 
+                    // 元の形式のまま保存・URL をコピーするボタン（PC ではマウスを載せたとき、タッチの端末では常に出す）
+                    let actions = document.createElement('div');
+                    actions.classList.add('icon-actions', 'position-absolute', 'top-0', 'end-0', 'd-flex');
+                    const makeAction = (label, title, onClick) => {
+                        const button = document.createElement('button');
+                        button.type = 'button';
+                        button.classList.add('icon-action', 'btn', 'btn-light', 'p-0');
+                        button.innerText = label;
+                        button.title = title;
+                        button.setAttribute('aria-label', title + '（' + basename(element.path) + '）');
+                        button.addEventListener('click', e => {
+                            e.stopPropagation();
+                            onClick();
+                        });
+                        actions.appendChild(button);
+                    };
+                    makeAction('⬇', '元の形式・大きさでダウンロード', () => downloadImage(img.src, element.path));
+                    makeAction('🔗', '画像の URL をコピー', () => copyImageUrl(img.src));
+
                     box.appendChild(img);
+                    box.appendChild(actions);
                     captionBox.appendChild(captionLabel);
                     box.appendChild(captionBox);
                     nameBox.appendChild(nameLabel);
@@ -509,7 +594,7 @@ const parseJson = (term = '', ignore_case = false) => {
                 img.alt = element.path;
                 img.className = 'img-thumbnail';
                 img.crossOrigin = 'anonymous';
-                img.title = element.path + "\n---\n" + element.description + "\n（クリックしてクリップボードにコピー）";
+                img.title = element.path + "\n---\n" + element.description + "\n（クリックで PNG としてクリップボードにコピー。右上の ⬇ で元の形式のまま保存、🔗 で URL をコピー）";
                 img.src = element.path.startsWith(msLearnIconBaseUri) ? element.path : (element.path.startsWith(materialIconsBaseUri2) ? element.path.replace(materialIconsBaseUri2, materialIconsBaseUri) : (baseUri + element.path));
                 return box;
             };
@@ -563,7 +648,10 @@ window.addEventListener('DOMContentLoaded', _ => {
     document.querySelectorAll('.alert').forEach((alert) => new bootstrap.Alert(alert));
     toastDict = {
         'toast-copied': new bootstrap.Toast(document.getElementById('toast-copied'), {
-            delay: 500,
+            delay: 2000,
+        }),
+        'toast-failed': new bootstrap.Toast(document.getElementById('toast-failed'), {
+            delay: 5000,
         }),
         'toast-input-keyword': new bootstrap.Toast(document.getElementById('toast-input-keyword'), {
             delay: 2000,
