@@ -125,19 +125,25 @@ const renderSourceFilter = (counts, total, term, ignore_case) => {
     container.classList.toggle('d-none', Object.keys(counts).length === 0);
 };
 
+// 大文字・小文字の切り替えの文言（どこで切り替えても同じ表記にする）
+const updateIgnoreCaseLabel = () => {
+    const checked = document.getElementById('icon-search-ignorecase').checked;
+    document.getElementById('icon-search-ignorecase-label').innerText = '大文字/小文字を区別' + (checked ? 'しない' : 'する');
+};
+
 const retrieveQueryDict = () => {
     const urlSearchParams = new URLSearchParams(window.location.search);
     return Object.fromEntries(urlSearchParams.entries());
 };
 
-// 検索の条件を URL に書き戻す（?term=…&ic=t&ts=…）。履歴は増やさない。既定の値は書かない。ほかの引数（conn など）は残す
+// 検索の条件を URL に書き戻す（?term=…&ic=f&ts=…）。履歴は増やさない。既定の値は書かない。ほかの引数（conn など）は残す
 const updateQueryString = () => {
     const params = new URLSearchParams(window.location.search);
     const term = document.getElementById('icon-search-term').value.trim();
     const ignoreCase = document.getElementById('icon-search-ignorecase').checked;
     const ts = document.getElementById('icon-copy-transparent-select').value;
     term !== '' ? params.set('term', term) : params.delete('term');
-    ignoreCase ? params.set('ic', 't') : params.delete('ic');
+    ignoreCase ? params.delete('ic') : params.set('ic', 'f');
     ts !== 'none' ? params.set('ts', ts) : params.delete('ts');
     const query = params.toString();
     const next = window.location.pathname + (query ? '?' + query : '') + window.location.hash;
@@ -204,7 +210,7 @@ const loadDataSource = () => {
         },
         {
             "url": "https://learn.microsoft.com/ja-jp/entra/architecture/architecture-icons",
-            "name": "[Microsoft Entra ID アーキテクチャ アイコン"
+            "name": "Microsoft Entra ID アーキテクチャ アイコン"
         },
         {
             "url": "https://learn.microsoft.com/ja-jp/fabric/fundamentals/icons",
@@ -657,11 +663,7 @@ const scheduleSearch = () => {
 window.addEventListener('DOMContentLoaded', _ => {
     loadDataSource();
 
-    document.getElementById('icon-search-ignorecase').addEventListener('change', _ => {
-        const checked = document.getElementById('icon-search-ignorecase').checked;
-        document.getElementById('icon-search-ignorecase-label').innerText = "大文字/小文字を区別"
-            + (checked ? "しない" : "する");
-    });
+    document.getElementById('icon-search-ignorecase').addEventListener('change', updateIgnoreCaseLabel);
 
     document.querySelectorAll('.alert').forEach((alert) => new bootstrap.Alert(alert));
     toastDict = {
@@ -679,14 +681,14 @@ window.addEventListener('DOMContentLoaded', _ => {
         })
     };
 
-    // クエリパラメーターをもとに設定: icon-search-ignorecase
+    // クエリパラメーターをもとに設定: icon-search-ignorecase（既定は区別しない。ic=f で区別する。ic=t は以前の URL のため）
     let ic = retrieveQueryDict()['ic'];
-    if (ic) {
-        if (ic == 't') {
-            document.getElementById('icon-search-ignorecase').checked = true;
-            document.getElementById('icon-search-ignorecase-label').innerText = "大/小文字を区別しない";
-        }
+    if (ic == 'f') {
+        document.getElementById('icon-search-ignorecase').checked = false;
+    } else if (ic == 't') {
+        document.getElementById('icon-search-ignorecase').checked = true;
     }
+    updateIgnoreCaseLabel();
 
     // クエリパラメーターをもとに設定: icon-copy-transparent-select
     let ts = retrieveQueryDict()['ts'];
