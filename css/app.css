@@ -34,8 +34,31 @@
     flex-flow: row wrap;
 }
 
-#image-list > div {
+#image-list > div,
+.saved-list > div {
     width: 64px;
+}
+
+/* お気に入り・最近コピーした（検索欄の下の帯）。PC 幅では折り返し、スマートフォン幅では横にスクロールする */
+.saved-list {
+    display: flex;
+    flex-flow: row wrap;
+    padding-bottom: .25rem;
+}
+
+.saved-list > div {
+    flex: 0 0 64px;
+}
+
+.saved-section summary {
+    cursor: pointer;
+}
+
+@media (max-width: 575.98px) {
+    .saved-list {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
 }
 
 #icon-search {
@@ -70,7 +93,9 @@
 }
 
 #image-list > div:hover .icon-actions,
-#image-list > div:focus-within .icon-actions {
+#image-list > div:focus-within .icon-actions,
+.saved-list > div:hover .icon-actions,
+.saved-list > div:focus-within .icon-actions {
     opacity: 1;
 }
 
@@ -81,10 +106,11 @@
     }
 }
 
+/* 3 つ（⬇ 🔗 ☆）が 64px の枠に収まる大きさ */
 .icon-action {
-    width: 22px;
-    height: 22px;
-    font-size: 12px;
-    line-height: 22px;
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
+    line-height: 20px;
     border: 1px solid rgba(0, 0, 0, .2);
 }

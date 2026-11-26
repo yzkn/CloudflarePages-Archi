@@ -104,6 +104,18 @@
 
         <main class="flex-shrink-0">
             <div class="w-100">
+                <div id="saved-icons" class="px-2 pt-2 d-none">
+                    <details id="saved-favorites" class="saved-section d-none" open>
+                        <summary class="small text-muted">お気に入り <span id="favorite-count"></span></summary>
+                        <div id="favorite-list" class="saved-list" role="group" aria-label="お気に入りのアイコン"></div>
+                    </details>
+                    <details id="saved-recent" class="saved-section d-none" open>
+                        <summary class="small text-muted">最近コピーした <span id="recent-count"></span>
+                            <button type="button" class="btn btn-link btn-sm p-0 ms-2 align-baseline" id="recent-clear">消去</button>
+                        </summary>
+                        <div id="recent-list" class="saved-list" role="group" aria-label="最近コピーしたアイコン"></div>
+                    </details>
+                </div>
                 <div id="result-count" class="px-2 pt-2 small text-muted d-none" role="status" aria-live="polite"></div>
                 <div id="source-filter" class="d-flex flex-wrap gap-1 px-2 py-2 d-none" role="group"
                     aria-label="出典で絞り込む"></div>
